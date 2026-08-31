@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Égide Digital — Planos e Investimento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10222F;          /* azul-tinta profundo */
+    --slate:#3B4B57;        /* texto secundário */
+    --paper:#F3F5F4;        /* fundo frio, quase branco */
+    --card:#FFFFFF;
+    --bronze:#B4842C;       /* bronze do escudo */
+    --bronze-soft:#F1E7D2;
+    --line:#DDE3E2;
+    --ok:#2E6E4E;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Archivo',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+
+  /* ---------- HERO ---------- */
+  header{background:var(--ink);color:#EDF1F0;padding:56px 0 48px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-70px;top:-40px;width:340px;height:340px;
+    background:radial-gradient(closest-side, rgba(180,132,44,.22), transparent 70%);pointer-events:none}
+  header .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .brand{display:flex;align-items:center;gap:14px;margin-bottom:26px;justify-content:center}
+  .brand svg{flex:none}
+  .brand-name{font-family:'Marcellus',serif;font-size:1.35rem;letter-spacing:.14em;text-transform:uppercase}
+  .brand-name span{color:var(--bronze)}
+  h1{font-family:'Marcellus',serif;font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.15;max-width:20ch;margin:0 auto}
+  .hero-sub{margin:14px auto 0;color:#B9C6C4;max-width:52ch;font-size:1.02rem}
+  .hero-sub strong{color:#EDF1F0;font-weight:600}
+
+  /* ---------- SEÇÕES ---------- */
+  .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);margin-bottom:8px;text-align:center}
+  section{padding:44px 0}
+  h2{font-family:'Marcellus',serif;font-size:1.7rem;margin-bottom:6px;text-align:center}
+  .section-note{color:var(--slate);max-width:60ch;margin:0 auto 26px;text-align:center}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:640px){.grid{grid-template-columns:1fr}}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 24px;position:relative;display:flex;flex-direction:column}
+  .card h3{font-family:'Marcellus',serif;font-size:1.25rem;margin-bottom:2px}
+  .card .for{color:var(--slate);font-size:.9rem;margin-bottom:16px}
+  .price{font-family:'Marcellus',serif;font-size:2.1rem;line-height:1}
+  .price small{font-family:'Archivo',sans-serif;font-size:.85rem;color:var(--slate);font-weight:500;letter-spacing:0}
+  .price-note{font-size:.82rem;color:var(--slate);margin-top:4px;margin-bottom:18px}
+  ul{list-style:none;margin-top:2px}
+  li{padding:7px 0 7px 26px;position:relative;font-size:.94rem;border-top:1px dashed var(--line)}
+  li:first-child{border-top:0}
+  li::before{content:"";position:absolute;left:2px;top:13px;width:13px;height:13px;
+    background:var(--bronze);clip-path:polygon(50% 0, 100% 18%, 100% 62%, 50% 100%, 0 62%, 0 18%)}
+  li.limit::before{background:var(--slate)}
+  li em{font-style:normal;color:var(--slate);font-size:.85rem}
+
+  .featured{border:2px solid var(--bronze);box-shadow:0 10px 28px rgba(16,34,47,.10)}
+  .badge{position:absolute;top:-13px;left:24px;background:var(--bronze);color:#fff;font-size:.7rem;
+    font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:99px}
+
+  /* ---------- COMPROMISSO ---------- */
+  .pledge{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 24px;
+    display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;max-width:680px;margin:0 auto}
+  .pledge svg{flex:none}
+  .pledge h3{font-family:'Marcellus',serif;font-size:1.15rem;margin-bottom:6px}
+  .pledge p{color:var(--slate);font-size:.94rem;max-width:64ch;margin:0 auto}
+
+  /* ---------- OFERTA / CTA ---------- */
+  .launch{background:var(--bronze-soft);border:1px dashed var(--bronze);border-radius:14px;padding:20px 24px;margin:18px auto 0;font-size:.94rem;text-align:center;max-width:640px}
+  .launch strong{color:var(--bronze)}
+
+  footer{background:var(--ink);color:#EDF1F0;padding:42px 0;margin-top:24px;text-align:center}
+  footer h2{color:#EDF1F0}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;justify-content:center}
+  .fine{margin-left:auto;margin-right:auto}
+  .btn{display:inline-block;background:var(--bronze);color:#fff;text-decoration:none;font-weight:600;
+    padding:13px 26px;border-radius:10px;font-size:.98rem}
+  .btn.ghost{background:transparent;border:1px solid #4A5C68;color:#EDF1F0}
+  .fine{margin-top:26px;color:#8FA0A5;font-size:.78rem;max-width:70ch}
+
+  /* ---------- IMPRESSÃO ---------- */
+  @media print{
+    body{background:#fff}
+    header,footer{background:#fff;color:var(--ink)}
+    header::after{display:none}
+    .hero-sub,.fine{color:var(--slate)}
+    .btn{display:none}
+    section{padding:24px 0}
+    .card{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <svg width="34" height="40" viewBox="0 0 34 40" fill="none" aria-hidden="true">
+        <path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2" fill="none"/>
+        <path d="M17 9v22M9.5 15.5 17 12l7.5 3.5" stroke="#B4842C" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+      </svg>
+      <div class="brand-name">Égide <span>Digital</span></div>
+    </div>
+    <h1>Seu negócio protegido e vendendo no digital.</h1>
+    <p class="hero-sub">Site profissional no ar em até <strong>7 dias</strong>, com manutenção, segurança e suporte de quem está aqui em Marabá — <strong>não de um robô de central de atendimento</strong>.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Etapa 1 · Investimento único</p>
+    <h2>Criação do seu site</h2>
+    <p class="section-note">Você escolhe o formato, a Égide cuida de tudo: textos, estrutura, imagens, botão de WhatsApp e configuração completa.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Página de Vendas</h3>
+        <p class="for">Pra quem quer começar a atrair clientes agora</p>
+        <div class="price">R$ 497 <small>· em até 3x</small></div>
+        <p class="price-note">Pagamento único — o site é seu</p>
+        <ul>
+          <li>Página profissional de alta conversão (modelo exclusivo Égide)</li>
+          <li>Textos de venda escritos para o seu negócio</li>
+          <li>Botão direto para o seu WhatsApp</li>
+          <li>Pronto para celular, tablet e computador</li>
+          <li>No ar em até 7 dias</li>
+          <li class="limit">1 rodada de ajustes incluída <em>· ajustes extras no Plano de Gestão</em></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Site Completo</h3>
+        <p class="for">Pra empresa que quer presença de marca</p>
+        <div class="price">R$ 1.497 <small>· em até 3x</small></div>
+        <p class="price-note">Pagamento único — o site é seu</p>
+        <ul>
+          <li>Site institucional com múltiplas páginas (serviços, sobre, contato)</li>
+          <li>Tudo da Página de Vendas, incluído</li>
+          <li>Estrutura pensada para o Google encontrar você</li>
+          <li>Formulários e integrações sob medida</li>
+          <li>2 rodadas de ajustes incluídas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Etapa 2 · Mensalidade</p>
+    <h2>Planos de Gestão</h2>
+    <p class="section-note">Site parado no ar é site perdendo venda. O Plano de Gestão mantém tudo funcionando, seguro e evoluindo — sob a égide de quem entende.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Gestão Essencial</h3>
+        <p class="for">Seu site sempre no ar, sem dor de cabeça</p>
+        <div class="price">R$ 67 <small>/mês</small></div>
+        <p class="price-note">ou R$ 670/ano à vista (2 meses grátis)</p>
+        <ul>
+          <li>Site no ar 24h com monitoramento</li>
+          <li>Certificado de segurança (cadeado verde)</li>
+          <li>Backup automático semanal</li>
+          <li>Suporte direto por WhatsApp</li>
+          <li class="limit">Até 30 min de alterações por mês <em>· troca de preço, foto, texto</em></li>
+        </ul>
+      </div>
+      <div class="card featured">
+        <span class="badge">Mais escolhido</span>
+        <h3>Gestão Performance</h3>
+        <p class="for">Pra quem quer o site trabalhando e provando resultado</p>
+        <div class="price">R$ 127 <small>/mês</small></div>
+        <p class="price-note">ou R$ 1.270/ano à vista (2 meses grátis)</p>
+        <ul>
+          <li>Tudo do Essencial, incluído</li>
+          <li>Relatório mensal: visitas, tempo na página e cliques no WhatsApp</li>
+          <li>Otimizações contínuas de conversão</li>
+          <li>Alterações ampliadas (até 1h30/mês)</li>
+          <li>Prioridade no atendimento</li>
+        </ul>
+      </div>
+    </div>
+    <div class="launch">
+      <strong>Oferta de fundação:</strong> os 10 primeiros clientes da Égide garantem a Página de Vendas por <strong>R$ 397</strong> e entram para o portfólio inaugural. Vagas limitadas.
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Quem constrói o seu site</p>
+    <h2>Tecnologia própria, não revenda.</h2>
+    <p class="section-note">A Égide Digital é a empresa por trás da <strong>SecretarIA</strong> — inteligência artificial de atendimento no WhatsApp que trabalha 24h por dia para clínicas e negócios reais. Seu site é construído por quem desenvolve e vive tecnologia todos os dias, aqui de Marabá.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="pledge">
+      <svg width="30" height="35" viewBox="0 0 34 40" fill="none" aria-hidden="true">
+        <path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2" fill="none"/>
+        <path d="m10.5 19.5 4.5 4.5 8.5-9" stroke="#B4842C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <div>
+        <h3>Compromisso Égide: o site é seu.</h3>
+        <p>A criação garante a propriedade do site; o Plano de Gestão mantém ele no ar, seguro e evoluindo. Se um dia você quiser sair, recebe todos os arquivos do seu site — sem multa, sem retenção, sem letra miúda. Confiança se constrói assim.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="eyebrow">Próximo passo</p>
+    <h2>Vamos colocar seu negócio no digital?</h2>
+    <div class="cta-row">
+      <a class="btn" href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20sites%20da%20%C3%89gide%20Digital">Chamar no WhatsApp</a>
+      <a class="btn ghost" href="https://www.instagram.com/egidedigital">@egidedigital</a>
+    </div>
+    <p class="fine">Égide Digital · G L Consultoria &amp; Serviços · CNPJ 68.744.111/0001-46 · Marabá-PA · egidedigital.com.br<br>
+    Valores válidos para esta proposta. Alterações dentro do plano consideram tarefas simples de conteúdo; novas páginas e funcionalidades são orçadas à parte.</p>
+  </div>
+</footer>
+
+</body>
+</html>
