@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Égide Digital — Planos e Investimento</title>
+<title>Égide Digital — Criação de Sites: Planos e Investimento</title>
+<meta name="description" content="Criação de sites profissionais em Marabá-PA com manutenção, segurança e suporte direto. Planos de criação e de gestão mensal pela Égide Digital.">
+<link rel="canonical" href="https://egidedigital.com.br/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -25,14 +27,24 @@
   header{background:var(--ink);color:#EDF1F0;padding:56px 0 48px;position:relative;overflow:hidden}
   header::after{content:"";position:absolute;right:-70px;top:-40px;width:340px;height:340px;
     background:radial-gradient(closest-side, rgba(180,132,44,.22), transparent 70%);pointer-events:none}
-  header .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
-  .brand{display:flex;align-items:center;gap:14px;margin-bottom:26px;justify-content:center}
+  header .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1}
+  .brand{display:flex;align-items:center;gap:14px;margin-bottom:18px;justify-content:center}
   .brand svg{flex:none}
   .brand-name{font-family:'Marcellus',serif;font-size:1.35rem;letter-spacing:.14em;text-transform:uppercase}
   .brand-name span{color:var(--bronze)}
   h1{font-family:'Marcellus',serif;font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.15;max-width:20ch;margin:0 auto}
   .hero-sub{margin:14px auto 0;color:#B9C6C4;max-width:52ch;font-size:1.02rem}
   .hero-sub strong{color:#EDF1F0;font-weight:600}
+
+  /* ---------- NAVEGAÇÃO ---------- */
+  .nav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+  .nav a{color:#B9C6C4;text-decoration:none;font-size:.9rem;font-weight:500;letter-spacing:.04em;
+    padding-bottom:4px;border-bottom:2px solid transparent}
+  .nav a:hover{color:#EDF1F0}
+  .nav a[aria-current="page"]{color:#EDF1F0;border-bottom-color:var(--bronze)}
+  .foot-nav{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:26px;font-size:.88rem}
+  .foot-nav a{color:#B9C6C4;text-decoration:none}
+  .foot-nav a:hover{color:#EDF1F0;text-decoration:underline}
 
   /* ---------- SEÇÕES ---------- */
   .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);margin-bottom:8px;text-align:center}
@@ -87,7 +99,7 @@
     header,footer{background:#fff;color:var(--ink)}
     header::after{display:none}
     .hero-sub,.fine{color:var(--slate)}
-    .btn{display:none}
+    .btn,.nav,.foot-nav{display:none}
     section{padding:24px 0}
     .card{break-inside:avoid}
   }
@@ -110,6 +122,10 @@
       </svg>
       <div class="brand-name">Égide <span>Digital</span></div>
     </div>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="/" aria-current="page">Criação de Sites</a>
+      <a href="/trafego-pago/">Tráfego Pago</a>
+    </nav>
     <h1>Seu negócio protegido e vendendo no digital.</h1>
     <p class="hero-sub">Site profissional no ar em até <strong>7 dias</strong>, com manutenção, segurança e suporte de quem está aqui em Marabá — <strong>não de um robô de central de atendimento</strong>.</p>
   </div>
@@ -223,6 +239,10 @@
       <a class="btn" href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20sites%20da%20%C3%89gide%20Digital">Chamar no WhatsApp</a>
       <a class="btn ghost" href="https://www.instagram.com/egidedigital">@egidedigital</a>
     </div>
+    <nav class="foot-nav" aria-label="Navegação do rodapé">
+      <a href="/">Criação de Sites</a>
+      <a href="/trafego-pago/">Tráfego Pago</a>
+    </nav>
     <p class="fine">Égide Digital · G L DOS SANTOS, COMERCIO CONSULTORIA E SERVICOS LTDA · CNPJ 68.744.111/0001-46 · R Folha 27, nº 08, Quadra 07 Lote 08, Sala 02 — Nova Marabá, Marabá-PA, CEP 68.509-160 · egidedigital.com.br<br>
     Valores válidos para esta proposta. Alterações dentro do plano consideram tarefas simples de conteúdo; novas páginas e funcionalidades são orçadas à parte.</p>
   </div>

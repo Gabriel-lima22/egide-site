@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestão de Tráfego Pago — Google Ads e Meta Ads | Égide Digital</title>
+<meta name="description" content="A Égide Digital planeja, executa e gerencia campanhas de Google Ads e Meta Ads para empresas e profissionais liberais, com rastreamento de conversões e relatórios claros de desempenho.">
+<link rel="canonical" href="https://egidedigital.com.br/trafego-pago/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10222F;          /* azul-tinta profundo */
+    --slate:#3B4B57;        /* texto secundário */
+    --paper:#F3F5F4;        /* fundo frio, quase branco */
+    --card:#FFFFFF;
+    --bronze:#B4842C;       /* bronze do escudo */
+    --bronze-soft:#F1E7D2;
+    --line:#DDE3E2;
+    --ok:#2E6E4E;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Archivo',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+
+  /* ---------- HERO ---------- */
+  header{background:var(--ink);color:#EDF1F0;padding:56px 0 48px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-70px;top:-40px;width:340px;height:340px;
+    background:radial-gradient(closest-side, rgba(180,132,44,.22), transparent 70%);pointer-events:none}
+  header .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1}
+  .brand{display:flex;align-items:center;gap:14px;margin-bottom:18px;justify-content:center;text-decoration:none;color:inherit}
+  .brand svg{flex:none}
+  .brand-name{font-family:'Marcellus',serif;font-size:1.35rem;letter-spacing:.14em;text-transform:uppercase}
+  .brand-name span{color:var(--bronze)}
+  h1{font-family:'Marcellus',serif;font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.15;max-width:20ch;margin:0 auto}
+  .hero-sub{margin:14px auto 0;color:#B9C6C4;max-width:52ch;font-size:1.02rem}
+  .hero-sub strong{color:#EDF1F0;font-weight:600}
+
+  /* ---------- NAVEGAÇÃO ---------- */
+  .nav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+  .nav a{color:#B9C6C4;text-decoration:none;font-size:.9rem;font-weight:500;letter-spacing:.04em;
+    padding-bottom:4px;border-bottom:2px solid transparent}
+  .nav a:hover{color:#EDF1F0}
+  .nav a[aria-current="page"]{color:#EDF1F0;border-bottom-color:var(--bronze)}
+
+  /* ---------- SEÇÕES ---------- */
+  .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);margin-bottom:8px;text-align:center}
+  section{padding:44px 0}
+  h2{font-family:'Marcellus',serif;font-size:1.7rem;margin-bottom:6px;text-align:center}
+  .section-note{color:var(--slate);max-width:60ch;margin:0 auto 26px;text-align:center}
+  .lead{color:var(--slate);max-width:64ch;margin:0 auto;text-align:center;font-size:1.02rem}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:640px){.grid{grid-template-columns:1fr}}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 24px;position:relative;display:flex;flex-direction:column}
+  .card h3{font-family:'Marcellus',serif;font-size:1.25rem;margin-bottom:2px}
+  .card .for{color:var(--slate);font-size:.9rem;margin-bottom:16px}
+  .card p.desc{color:var(--slate);font-size:.94rem}
+  .card .mark{width:22px;height:26px;margin-bottom:12px}
+
+  /* ---------- ETAPAS ---------- */
+  .steps{counter-reset:step;display:grid;gap:14px;max-width:680px;margin:0 auto}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;
+    display:flex;gap:18px;align-items:flex-start}
+  .step::before{counter-increment:step;content:counter(step);flex:none;width:34px;height:34px;border-radius:99px;
+    background:var(--bronze-soft);color:var(--bronze);font-family:'Marcellus',serif;font-size:1.05rem;
+    display:flex;align-items:center;justify-content:center;line-height:1}
+  .step h3{font-family:'Marcellus',serif;font-size:1.1rem;margin-bottom:2px}
+  .step p{color:var(--slate);font-size:.94rem}
+
+  /* ---------- DIFERENCIAL ---------- */
+  .pledge{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 24px;
+    display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;max-width:680px;margin:0 auto}
+  .pledge svg{flex:none}
+  .pledge h3{font-family:'Marcellus',serif;font-size:1.15rem;margin-bottom:6px}
+  .pledge p{color:var(--slate);font-size:.94rem;max-width:64ch;margin:0 auto}
+
+  /* ---------- BOTÕES / RODAPÉ ---------- */
+  footer{background:var(--ink);color:#EDF1F0;padding:42px 0;margin-top:24px;text-align:center}
+  footer h2{color:#EDF1F0}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;justify-content:center}
+  .btn{display:inline-block;background:var(--bronze);color:#fff;text-decoration:none;font-weight:600;
+    padding:13px 26px;border-radius:10px;font-size:.98rem}
+  .btn.ghost{background:transparent;border:1px solid #4A5C68;color:#EDF1F0}
+  .hero-cta{margin-top:26px}
+  .foot-nav{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:26px;font-size:.88rem}
+  .foot-nav a{color:#B9C6C4;text-decoration:none}
+  .foot-nav a:hover{color:#EDF1F0;text-decoration:underline}
+  .fine{margin:18px auto 0;color:#8FA0A5;font-size:.78rem;max-width:70ch}
+
+  /* ---------- IMPRESSÃO ---------- */
+  @media print{
+    body{background:#fff}
+    header,footer{background:#fff;color:var(--ink)}
+    header::after{display:none}
+    .hero-sub,.fine{color:var(--slate)}
+    .btn,.nav,.foot-nav{display:none}
+    section{padding:24px 0}
+    .card,.step{break-inside:avoid}
+  }
+</style>
+<!-- Umami Analytics (self-hosted) -->
+<script defer src="https://analytics.egidedigital.com.br/script.js" data-website-id="bfe900ee-d585-4514-bb2a-141f4b0569f7"></script>
+<!-- recorder.js: coleta de heatmaps. Complementa o script.js acima, nao o substitui:
+     ele espera window.umami.getSession().cache, que so existe depois que o script.js
+     registra o primeiro pageview. Sem o script.js nao ha heatmap nem analytics. -->
+<script defer src="https://analytics.egidedigital.com.br/recorder.js" data-website-id="bfe900ee-d585-4514-bb2a-141f4b0569f7"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg width="34" height="40" viewBox="0 0 34 40" fill="none" aria-hidden="true">
+        <path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2" fill="none"/>
+        <path d="M17 9v22M9.5 15.5 17 12l7.5 3.5" stroke="#B4842C" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+      </svg>
+      <div class="brand-name">Égide <span>Digital</span></div>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="/">Criação de Sites</a>
+      <a href="/trafego-pago/" aria-current="page">Tráfego Pago</a>
+    </nav>
+    <h1>Gestão de Tráfego Pago</h1>
+    <p class="hero-sub">Campanhas no <strong>Google</strong> e no <strong>Meta</strong> para atrair clientes qualificados todos os dias.</p>
+    <div class="hero-cta">
+      <a class="btn" href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20gest%C3%A3o%20de%20tr%C3%A1fego%20pago.">Falar com um especialista</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">O que fazemos</p>
+    <h2>Anúncios geridos de ponta a ponta</h2>
+    <p class="lead">A Égide Digital planeja, executa e gerencia campanhas de anúncios pagos para empresas e profissionais liberais, cuidando de toda a operação: da estruturação inicial ao acompanhamento diário de resultados.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Serviços</p>
+    <h2>O que está incluído</h2>
+    <p class="section-note">Cada frente da operação é conduzida pela Égide, com acesso e transparência para você acompanhar.</p>
+    <div class="grid">
+      <div class="card">
+        <svg class="mark" viewBox="0 0 34 40" fill="none" aria-hidden="true">
+          <path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2" fill="none"/>
+        </svg>
+        <h3>Google Ads</h3>
+        <p class="desc">Campanhas de pesquisa para aparecer exatamente quando o cliente procura pelo seu serviço, com gestão contínua de palavras-chave e negativações.</p>
+      </div>
+      <div class="card">
+        <svg class="mark" viewBox="0 0 34 40" fill="none" aria-hidden="true">
+          <path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2" fill="none"/>
+        </svg>
+        <h3>Meta Ads</h3>
+        <p class="desc">Anúncios no Instagram e no Facebook para gerar demanda, fortalecer a marca e fazer remarketing de quem já demonstrou interesse.</p>
+      </div>
+      <div class="card">
+        <svg class="mark" viewBox="0 0 34 40" fill="none" aria-hidden="true">
+          <path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2" fill="none"/>
+        </svg>
+        <h3>Rastreamento de conversões</h3>
+        <p class="desc">Acompanhamos o caminho completo do lead, do clique no anúncio até o atendimento no WhatsApp, para saber o que realmente gera clientes.</p>
+      </div>
+      <div class="card">
+        <svg class="mark" viewBox="0 0 34 40" fill="none" aria-hidden="true">
+          <path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2" fill="none"/>
+        </svg>
+        <h3>Relatórios de desempenho</h3>
+        <p class="desc">Relatórios claros com investimento, custo por lead e resultados de cada campanha.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Como trabalhamos</p>
+    <h2>Da estruturação à otimização</h2>
+    <p class="section-note">Um processo em quatro etapas, do primeiro diagnóstico ao ajuste fino de todo dia.</p>
+    <div class="steps">
+      <div class="step">
+        <div>
+          <h3>Diagnóstico</h3>
+          <p>Entendemos seu negócio, seu público e seus objetivos.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <h3>Estruturação</h3>
+          <p>Montamos as campanhas, os públicos e o rastreamento.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <h3>Gestão diária</h3>
+          <p>Acompanhamos os números e ajustamos lances, orçamentos e palavras-chave.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <h3>Otimização contínua</h3>
+          <p>Cortamos o que só gasta e reforçamos o que traz cliente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="pledge">
+      <svg width="30" height="35" viewBox="0 0 34 40" fill="none" aria-hidden="true">
+        <path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2" fill="none"/>
+        <path d="m10.5 19.5 4.5 4.5 8.5-9" stroke="#B4842C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <div>
+        <h3>Foco em cliente, não em clique.</h3>
+        <p>Muita campanha mede sucesso por cliques e visualizações. Nós medimos pelo que importa: quantos contatos viraram clientes e quanto custou cada um. Integramos os dados dos anúncios com o atendimento no WhatsApp para otimizar o investimento com base em resultado real.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="eyebrow">Próximo passo</p>
+    <h2>Pronto para atrair mais clientes?</h2>
+    <div class="cta-row">
+      <a class="btn" href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20gest%C3%A3o%20de%20tr%C3%A1fego%20pago.">Solicitar diagnóstico gratuito</a>
+      <a class="btn ghost" href="https://www.instagram.com/egidedigital">@egidedigital</a>
+    </div>
+    <nav class="foot-nav" aria-label="Navegação do rodapé">
+      <a href="/">Criação de Sites</a>
+      <a href="/trafego-pago/">Tráfego Pago</a>
+    </nav>
+    <p class="fine">Égide Digital · G L DOS SANTOS, COMERCIO CONSULTORIA E SERVICOS LTDA · CNPJ 68.744.111/0001-46 · R Folha 27, nº 08, Quadra 07 Lote 08, Sala 02 — Nova Marabá, Marabá-PA, CEP 68.509-160 · egidedigital.com.br</p>
+  </div>
+</footer>
+
+</body>
+</html>
