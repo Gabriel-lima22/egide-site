@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade | Égide Digital</title>
+<meta name="description" content="Como a Égide Digital coleta, utiliza e protege dados pessoais, incluindo dados de contas de anúncios no Google Ads e no Meta Ads, em conformidade com a LGPD.">
+<link rel="canonical" href="https://egidedigital.com.br/politica-de-privacidade/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10222F;          /* azul-tinta profundo */
+    --slate:#3B4B57;        /* texto secundário */
+    --paper:#F3F5F4;        /* fundo frio, quase branco */
+    --card:#FFFFFF;
+    --bronze:#B4842C;       /* bronze do escudo */
+    --bronze-soft:#F1E7D2;
+    --line:#DDE3E2;
+    --ok:#2E6E4E;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Archivo',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+
+  /* ---------- HERO ---------- */
+  header{background:var(--ink);color:#EDF1F0;padding:56px 0 48px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-70px;top:-40px;width:340px;height:340px;
+    background:radial-gradient(closest-side, rgba(180,132,44,.22), transparent 70%);pointer-events:none}
+  header .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1}
+  .brand{display:flex;align-items:center;gap:14px;margin-bottom:18px;justify-content:center;text-decoration:none;color:inherit}
+  .brand svg{flex:none}
+  .brand-name{font-family:'Marcellus',serif;font-size:1.35rem;letter-spacing:.14em;text-transform:uppercase}
+  .brand-name span{color:var(--bronze)}
+  h1{font-family:'Marcellus',serif;font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.15;max-width:20ch;margin:0 auto}
+  .hero-sub{margin:14px auto 0;color:#B9C6C4;max-width:52ch;font-size:1.02rem}
+
+  /* ---------- NAVEGAÇÃO ---------- */
+  .nav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+  .nav a{color:#B9C6C4;text-decoration:none;font-size:.9rem;font-weight:500;letter-spacing:.04em;
+    padding-bottom:4px;border-bottom:2px solid transparent}
+  .nav a:hover{color:#EDF1F0}
+  .nav a[aria-current="page"]{color:#EDF1F0;border-bottom-color:var(--bronze)}
+
+  /* ---------- TEXTO DA POLÍTICA ---------- */
+  .policy{padding:44px 0}
+  .doc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:36px 40px;max-width:720px;margin:0 auto}
+  @media(max-width:640px){.doc{padding:26px 20px}}
+  .doc .intro{color:var(--slate);font-size:1rem}
+  .doc h2{font-family:'Marcellus',serif;font-size:1.35rem;margin:34px 0 10px;padding-top:24px;border-top:1px solid var(--line)}
+  .doc p{color:var(--slate);font-size:.97rem}
+  .doc p + p{margin-top:12px}
+  .doc ul{list-style:none;display:grid;gap:10px}
+  .doc li{color:var(--slate);font-size:.97rem;padding-left:20px;position:relative}
+  .doc li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:99px;background:var(--bronze)}
+  .doc strong{color:var(--ink);font-weight:600}
+  .doc a{color:var(--bronze);text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
+  .contact{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+  .contact p{font-size:.95rem}
+  .contact p + p{margin-top:4px}
+
+  /* ---------- RODAPÉ ---------- */
+  footer{background:var(--ink);color:#EDF1F0;padding:42px 0;margin-top:24px;text-align:center}
+  .foot-nav{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;font-size:.88rem}
+  .foot-nav a{color:#B9C6C4;text-decoration:none}
+  .foot-nav a:hover{color:#EDF1F0;text-decoration:underline}
+  .foot-nav a[aria-current="page"]{color:#EDF1F0}
+  .fine{margin:18px auto 0;color:#8FA0A5;font-size:.78rem;max-width:70ch}
+
+  /* ---------- IMPRESSÃO ---------- */
+  @media print{
+    body{background:#fff}
+    header,footer{background:#fff;color:var(--ink)}
+    header::after{display:none}
+    .hero-sub,.fine{color:var(--slate)}
+    .nav,.foot-nav{display:none}
+    .policy{padding:16px 0}
+    .doc{border:none;padding:0}
+  }
+</style>
+<!-- Umami Analytics (self-hosted) -->
+<script defer src="https://analytics.egidedigital.com.br/script.js" data-website-id="bfe900ee-d585-4514-bb2a-141f4b0569f7"></script>
+<!-- recorder.js: coleta de heatmaps. Complementa o script.js acima, nao o substitui:
+     ele espera window.umami.getSession().cache, que so existe depois que o script.js
+     registra o primeiro pageview. Sem o script.js nao ha heatmap nem analytics. -->
+<script defer src="https://analytics.egidedigital.com.br/recorder.js" data-website-id="bfe900ee-d585-4514-bb2a-141f4b0569f7"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg width="34" height="40" viewBox="0 0 34 40" fill="none" aria-hidden="true">
+        <path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2" fill="none"/>
+        <path d="M17 9v22M9.5 15.5 17 12l7.5 3.5" stroke="#B4842C" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+      </svg>
+      <div class="brand-name">Égide <span>Digital</span></div>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="/">Criação de Sites</a>
+      <a href="/trafego-pago/">Tráfego Pago</a>
+    </nav>
+    <h1>Política de Privacidade</h1>
+    <p class="hero-sub">Última atualização: 26 de setembro de 2026</p>
+  </div>
+</header>
+
+<main class="policy">
+  <div class="wrap">
+    <article class="doc">
+      <p class="intro">Esta Política de Privacidade descreve como a Égide Digital, nome comercial de G L DOS SANTOS, COMERCIO CONSULTORIA E SERVICOS LTDA, inscrita no CNPJ 68.744.111/0001-46, coleta, utiliza e protege dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 – LGPD).</p>
+
+      <h2>1. Dados que coletamos</h2>
+      <ul>
+        <li><strong>Dados de contato:</strong> nome, telefone e mensagens que você envia voluntariamente ao entrar em contato pelo WhatsApp ou por outros canais indicados neste site.</li>
+        <li><strong>Dados de navegação:</strong> informações técnicas e estatísticas de acesso ao site, usadas de forma agregada para entender o uso das páginas. Para isso utilizamos o Umami, ferramenta de análise de acesso hospedada em nosso próprio servidor, que não utiliza cookies e registra informações como páginas visitadas, cliques e rolagem das páginas.</li>
+        <li><strong>Dados de contas de anúncios de clientes:</strong> quando um cliente contrata nossos serviços de gestão de tráfego e nos autoriza expressamente, acessamos dados das contas de anúncios dele no Google Ads e no Meta Ads, como campanhas, palavras-chave, orçamentos, métricas de desempenho e conversões.</li>
+      </ul>
+
+      <h2>2. Como usamos os dados</h2>
+      <ul>
+        <li>Responder solicitações e prestar os serviços contratados.</li>
+        <li>Planejar, criar, gerenciar e otimizar campanhas de anúncios dos clientes que nos autorizaram.</li>
+        <li>Gerar relatórios de desempenho para esses clientes.</li>
+        <li>Melhorar o funcionamento deste site.</li>
+      </ul>
+
+      <h2>3. Uso das APIs do Google e do Meta</h2>
+      <p>Utilizamos a API do Google Ads e a API de Marketing do Meta exclusivamente para gerenciar e analisar as contas de anúncios de clientes que nos concederam acesso. Esses dados não são usados para nenhuma outra finalidade, não são vendidos e não são compartilhados com terceiros.</p>
+      <p>O uso e a transferência, para qualquer outro aplicativo, de informações recebidas das APIs do Google seguirão a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google (Google API Services User Data Policy)</a>, incluindo os requisitos de Uso Limitado (Limited Use).</p>
+
+      <h2>4. Compartilhamento de dados</h2>
+      <p>Não vendemos, alugamos nem comercializamos dados pessoais. Os dados só podem ser compartilhados com prestadores de serviço essenciais à operação (como hospedagem), sob obrigação de confidencialidade, ou quando exigido por lei ou ordem judicial.</p>
+
+      <h2>5. Armazenamento e segurança</h2>
+      <p>Os dados são armazenados em servidores com acesso restrito e protegidos por medidas técnicas de segurança, como conexão criptografada (HTTPS) e controle de acesso. Mantemos os dados apenas pelo tempo necessário para as finalidades descritas ou para cumprir obrigações legais.</p>
+
+      <h2>6. Seus direitos</h2>
+      <p>Nos termos da LGPD, você pode solicitar a qualquer momento: confirmação da existência de tratamento, acesso aos dados, correção, anonimização, exclusão, portabilidade e revogação do consentimento. Clientes podem também revogar a qualquer momento o acesso concedido às suas contas de anúncios, diretamente nas configurações do Google ou do Meta.</p>
+
+      <h2>7. Exclusão de dados</h2>
+      <p>Para solicitar a exclusão dos seus dados, envie um e-mail para <a href="mailto:gabriel.limasantos22@gmail.com?subject=Exclus%C3%A3o%20de%20dados">gabriel.limasantos22@gmail.com</a> com o assunto "Exclusão de dados". Atenderemos a solicitação em até 15 dias, salvo quando a manutenção for exigida por lei.</p>
+
+      <h2>8. Alterações nesta política</h2>
+      <p>Esta política pode ser atualizada periodicamente. A data da última atualização está sempre indicada no topo da página.</p>
+
+      <h2>9. Contato</h2>
+      <div class="contact">
+        <p><strong>G L DOS SANTOS, COMERCIO CONSULTORIA E SERVICOS LTDA (Égide Digital)</strong></p>
+        <p>CNPJ: 68.744.111/0001-46</p>
+        <p>Endereço: R Folha 27, nº 08, Quadra 07 Lote 08 Sala 02, Nova Marabá, Marabá-PA, CEP 68.509-160</p>
+        <p>E-mail: <a href="mailto:gabriel.limasantos22@gmail.com">gabriel.limasantos22@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/5594992669085">(94) 99266-9085</a></p>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav class="foot-nav" aria-label="Navegação do rodapé">
+      <a href="/">Criação de Sites</a>
+      <a href="/trafego-pago/">Tráfego Pago</a>
+      <a href="/politica-de-privacidade/" aria-current="page">Política de Privacidade</a>
+    </nav>
+    <p class="fine">Égide Digital · G L DOS SANTOS, COMERCIO CONSULTORIA E SERVICOS LTDA · CNPJ 68.744.111/0001-46 · R Folha 27, nº 08, Quadra 07 Lote 08, Sala 02 — Nova Marabá, Marabá-PA, CEP 68.509-160 · egidedigital.com.br</p>
+  </div>
+</footer>
+
+</body>
+</html>
