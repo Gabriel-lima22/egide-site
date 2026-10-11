@@ -2,175 +2,163 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Termos de Serviço | Égide Digital</title>
-<meta name="description" content="Termos de Serviço da Égide Digital: condições para contratação de criação de sites, hospedagem e gestão de tráfego pago no Google Ads e no Meta Ads.">
+<meta name="description" content="Termos de Serviço da Égide Digital: condições para contratação de criação de sites, SecretarIA e gestão de tráfego pago no Google Ads e no Meta Ads.">
 <link rel="canonical" href="https://egidedigital.com.br/termos-de-servico/">
+<meta name="google-site-verification" content="yQJbP05klE8BDflifd0DNBOmDjlzYgZmfu3zhZwYXxY">
+<meta name="theme-color" content="#10222F">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Égide Digital">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Termos de Serviço | Égide Digital">
+<meta property="og:description" content="Termos de Serviço da Égide Digital: condições para contratação de criação de sites, SecretarIA e gestão de tráfego pago no Google Ads e no Meta Ads.">
+<meta property="og:url" content="https://egidedigital.com.br/termos-de-servico/">
+<meta property="og:image" content="https://egidedigital.com.br/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#10222F;          /* azul-tinta profundo */
-    --slate:#3B4B57;        /* texto secundário */
-    --paper:#F3F5F4;        /* fundo frio, quase branco */
-    --card:#FFFFFF;
-    --bronze:#B4842C;       /* bronze do escudo */
-    --bronze-soft:#F1E7D2;
-    --line:#DDE3E2;
-    --ok:#2E6E4E;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Archivo',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
-  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
 
-  /* ---------- HERO ---------- */
-  header{background:var(--ink);color:#EDF1F0;padding:56px 0 48px;position:relative;overflow:hidden}
-  header::after{content:"";position:absolute;right:-70px;top:-40px;width:340px;height:340px;
-    background:radial-gradient(closest-side, rgba(180,132,44,.22), transparent 70%);pointer-events:none}
-  header .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1}
-  .brand{display:flex;align-items:center;gap:14px;margin-bottom:18px;justify-content:center;text-decoration:none;color:inherit}
-  .brand svg{flex:none}
-  .brand-name{font-family:'Marcellus',serif;font-size:1.35rem;letter-spacing:.14em;text-transform:uppercase}
-  .brand-name span{color:var(--bronze)}
-  h1{font-family:'Marcellus',serif;font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.15;max-width:20ch;margin:0 auto}
-  .hero-sub{margin:14px auto 0;color:#B9C6C4;max-width:52ch;font-size:1.02rem}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#F3F5F4;color:#10222F;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+@media (max-width:860px){html{scrollbar-width:none}html::-webkit-scrollbar{display:none}}
+a{color:#8F661C}a:hover{color:#B4842C}
+h1,h2,h3,p{margin:0}
+@keyframes egFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes egRise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes egPulse{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.6);opacity:0}}
+@keyframes egDot{0%,80%,100%{transform:translateY(0);opacity:.35}40%{transform:translateY(-4px);opacity:1}}
+@keyframes egOrbit{from{transform:rotateX(74deg) rotateZ(0deg)}to{transform:rotateX(74deg) rotateZ(360deg)}}
+@keyframes egType{0%{max-width:0}24%,100%{max-width:40ch}}
+@keyframes egBlink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes egSeoFade{0%,24%{opacity:0;transform:translateY(8px)}30%,94%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes egSeoUp{0%,52%{transform:translateY(156px)}64%,100%{transform:translateY(0)}}
+@keyframes egSeoDown{0%,52%{transform:translateY(-78px)}64%,100%{transform:translateY(0)}}
+@keyframes egSeoBadge{0%,64%{opacity:0;transform:translateY(6px)}72%,100%{opacity:1;transform:none}}
+@keyframes egArc{to{stroke-dashoffset:12.6}}
+@keyframes egNeedle{to{transform:rotate(81deg)}}
+@keyframes egScroll{0%,9%{transform:translateY(0)}24%,33%{transform:translateY(-27%)}48%,57%{transform:translateY(-56%)}72%,84%{transform:translateY(calc(-100% + 100cqh))}100%{transform:translateY(0)}}
+@keyframes egDash{0%,4%{opacity:0;transform:translateY(6px)}10%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes egPillOff{0%,7%{opacity:1}10%,100%{opacity:0}}
+@keyframes egPillOn{0%,10.5%{opacity:0;transform:scale(.8)}14%,100%{opacity:1;transform:none}}
+@keyframes egBudget{0%,12%{width:0}90%,100%{width:74%}}
+@keyframes egBudget2{0%,14%{width:0}90%,100%{width:62%}}
+@keyframes egChart{0%,12%{stroke-dashoffset:420}90%,100%{stroke-dashoffset:0}}
+@keyframes egArea{0%,14%{opacity:0}40%,100%{opacity:1}}
+@keyframes egLead1{0%,22%{opacity:0;transform:translateY(10px)}27%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes egLead2{0%,36%{opacity:0;transform:translateY(10px)}41%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes egLead3{0%,50%{opacity:0;transform:translateY(10px)}55%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes egLead4{0%,64%{opacity:0;transform:translateY(10px)}69%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes egLead5{0%,76%{opacity:0;transform:translateY(10px)}81%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes egTravel{0%{left:0;opacity:0}6%{opacity:1}94%{opacity:1}100%{left:100%;opacity:0}}
+@keyframes egStage{0%,100%{box-shadow:0 0 0 0 rgba(180,132,44,0)}50%{box-shadow:0 0 0 10px rgba(180,132,44,.15)}}
+[data-shown] [data-gauge-arc]{animation:egArc 1.6s .2s cubic-bezier(.2,.7,.2,1) forwards}
+[data-shown] [data-gauge-needle]{animation:egNeedle 1.6s .2s cubic-bezier(.2,.7,.2,1) forwards}
+[data-shown] [data-gauge-num]{animation:egRise .5s 1.4s ease both}
+[data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}
+[data-reveal][data-shown]{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none}*{animation:none!important}}
 
-  /* ---------- NAVEGAÇÃO ---------- */
-  .nav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
-  .nav a{color:#B9C6C4;text-decoration:none;font-size:.9rem;font-weight:500;letter-spacing:.04em;
-    padding-bottom:4px;border-bottom:2px solid transparent}
-  .nav a:hover{color:#EDF1F0}
-  .nav a[aria-current="page"]{color:#EDF1F0;border-bottom-color:var(--bronze)}
-
-  /* ---------- TEXTO DA POLÍTICA ---------- */
-  .policy{padding:44px 0}
-  .doc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:36px 40px;max-width:720px;margin:0 auto}
-  @media(max-width:640px){.doc{padding:26px 20px}}
-  .doc .intro{color:var(--slate);font-size:1rem}
-  .doc h2{font-family:'Marcellus',serif;font-size:1.35rem;margin:34px 0 10px;padding-top:24px;border-top:1px solid var(--line)}
-  .doc p{color:var(--slate);font-size:.97rem}
-  .doc p + p{margin-top:12px}
-  .doc ul{list-style:none;display:grid;gap:10px}
-  .doc li{color:var(--slate);font-size:.97rem;padding-left:20px;position:relative}
-  .doc li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:99px;background:var(--bronze)}
-  .doc strong{color:var(--ink);font-weight:600}
-  .doc a{color:var(--bronze);text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
-  .contact{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
-  .contact p{font-size:.95rem}
-  .contact p + p{margin-top:4px}
-
-  /* ---------- RODAPÉ ---------- */
-  footer{background:var(--ink);color:#EDF1F0;padding:42px 0;margin-top:24px;text-align:center}
-  .foot-nav{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;font-size:.88rem}
-  .foot-nav a{color:#B9C6C4;text-decoration:none}
-  .foot-nav a:hover{color:#EDF1F0;text-decoration:underline}
-  .foot-nav a[aria-current="page"]{color:#EDF1F0}
-  .fine{margin:18px auto 0;color:#8FA0A5;font-size:.78rem;max-width:70ch}
-
-  /* ---------- IMPRESSÃO ---------- */
-  @media print{
-    body{background:#fff}
-    header,footer{background:#fff;color:var(--ink)}
-    header::after{display:none}
-    .hero-sub,.fine{color:var(--slate)}
-    .nav,.foot-nav{display:none}
-    .policy{padding:16px 0}
-    .doc{border:none;padding:0}
-  }
+.egh1:hover{color:#EDF1F0 !important}
+.egh2:hover{transform:translateY(-1px) !important;color:#fff !important}
+.egh3:hover{transform:translateY(-2px) !important;box-shadow:0 18px 34px -10px rgba(180,132,44,.75) !important;color:#fff !important}
+.egh4:hover{border-color:#B4842C !important;color:#EDF1F0 !important}
+.egb5::before{content:'';position:absolute;top:-4px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#D9A845;box-shadow:0 0 12px 2px rgba(217,168,69,.8)}
+.egh6:hover{box-shadow:0 30px 60px -28px rgba(16,34,47,.35) !important;color:#10222F !important}
+.egb7::before{content:'';position:absolute;inset:0;border-radius:50%;background:#3DBE7A;animation:egPulse 1.8s ease-out infinite}
+.egh8:hover{transform:translateY(-2px) !important;color:#fff !important}
+.egh9:hover{background:#10222F !important;color:#fff !important}
+.egh10:hover{color:#B4842C !important}
+.egh11:hover{transform:scale(1.06) !important;color:#fff !important}
+[data-page]{display:none}[data-page="home"]{display:contents}
+@media (max-width:859px){.eg-desk{display:none!important}}@media (min-width:860px){.eg-mob{display:none!important}}
+#servicos,#planos,#planos-sites,#servicos-trafego,#planos-trafego{scroll-margin-top:84px}
+img{max-width:100%}
+</style>
+<style>
+.doc{background:#fff;border:1px solid #DDE3E2;border-radius:20px;padding:clamp(24px,5vw,40px);max-width:760px;margin:0 auto}
+.doc .intro{color:#3B4B57;font-size:17px;line-height:1.65}
+.doc h2{font-family:Marcellus,serif;font-size:22px;font-weight:400;margin:34px 0 10px;padding-top:24px;border-top:1px solid #DDE3E2}
+.doc p{color:#3B4B57;font-size:16px;line-height:1.65}.doc p+p{margin-top:12px}
+.doc ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.doc li{color:#3B4B57;font-size:16px;line-height:1.6;padding-left:22px;position:relative}
+.doc li::before{content:"";position:absolute;left:2px;top:.55em;width:10px;height:10px;background:#B4842C;clip-path:polygon(50% 0,100% 18%,100% 62%,50% 100%,0 62%,0 18%)}
+.doc strong{color:#10222F;font-weight:600}
+.doc a{color:#8F661C;text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
+.contact{background:#F3F5F4;border:1px solid #DDE3E2;border-radius:12px;padding:18px 20px}.contact p{font-size:15px}.contact p+p{margin-top:4px}
+@media print{.doc{border:0;padding:0}header,footer{display:none}}
 </style>
 <!-- Umami Analytics (self-hosted) -->
 <script defer src="https://analytics.egidedigital.com.br/script.js" data-website-id="bfe900ee-d585-4514-bb2a-141f4b0569f7"></script>
-<!-- recorder.js: coleta de heatmaps. Complementa o script.js acima, nao o substitui:
-     ele espera window.umami.getSession().cache, que so existe depois que o script.js
-     registra o primeiro pageview. Sem o script.js nao ha heatmap nem analytics. -->
 <script defer src="https://analytics.egidedigital.com.br/recorder.js" data-website-id="bfe900ee-d585-4514-bb2a-141f4b0569f7"></script>
 </head>
 <body>
-
-<header>
-  <div class="wrap">
-    <a class="brand" href="/">
-      <svg width="34" height="40" viewBox="0 0 34 40" fill="none" aria-hidden="true">
-        <path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2" fill="none"/>
-        <path d="M17 9v22M9.5 15.5 17 12l7.5 3.5" stroke="#B4842C" stroke-width="1.6" stroke-linecap="round" fill="none"/>
-      </svg>
-      <div class="brand-name">Égide <span>Digital</span></div>
+<header style="position:sticky;top:0;z-index:50;background:rgba(16,34,47,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)">
+  <div style="max-width:1120px;margin:0 auto;padding:0 20px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <a href="/" aria-label="Égide Digital — início" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#EDF1F0">
+      <svg width="30" height="36" viewBox="0 0 34 40" fill="none" aria-hidden="true"><path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2"></path><path d="M17 9v22M9.5 15.5 17 12l7.5 3.5" stroke="#B4842C" stroke-width="1.6" stroke-linecap="round"></path></svg>
+      <span style="font-family:Marcellus,serif;font-size:17px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap">Égide <span style="color:#B4842C">Digital</span></span>
     </a>
-    <nav class="nav" aria-label="Navegação principal">
-      <a href="/">Criação de Sites</a>
-      <a href="/trafego-pago/">Tráfego Pago</a>
-      <a href="/secretaria/">SecretarIA</a>
-    </nav>
-    <h1>Termos de Serviço</h1>
-    <p class="hero-sub">Última atualização: 26 de setembro de 2026</p>
+    <a href="/" style="display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;white-space:nowrap;flex:none;border-radius:10px;border:1px solid rgba(255,255,255,.22);color:#EDF1F0;font-weight:600;font-size:14px;text-decoration:none">Voltar ao site</a>
   </div>
 </header>
-
-<main class="policy">
-  <div class="wrap">
-    <article class="doc">
-      <p class="intro">Estes Termos de Serviço regulam a contratação e o uso dos serviços da Égide Digital, nome comercial de G L DOS SANTOS, COMERCIO CONSULTORIA E SERVICOS LTDA, inscrita no CNPJ 68.744.111/0001-46. Ao contratar nossos serviços ou utilizar este site, você concorda com estes termos.</p>
-
-      <h2>1. Serviços</h2>
-      <p>A Égide Digital presta serviços de criação e manutenção de sites, hospedagem, gestão de tráfego pago (Google Ads e Meta Ads) e soluções digitais relacionadas. O escopo, os prazos e os valores de cada serviço são definidos na proposta ou contrato firmado com o cliente.</p>
-
-      <h2>2. Acesso às contas de anúncios</h2>
-      <p>Para a gestão de tráfego, o cliente concede à Égide Digital acesso às suas contas de anúncios no Google Ads e/ou Meta Ads. Esse acesso é usado exclusivamente para planejar, criar, gerenciar, otimizar e gerar relatórios das campanhas do próprio cliente, conforme descrito na nossa <a href="/politica-de-privacidade/">Política de Privacidade</a>. O cliente pode revogar esse acesso a qualquer momento, diretamente nas plataformas.</p>
-
-      <h2>3. Aprovação de alterações</h2>
-      <p>Criação de campanhas, definição de orçamentos e alterações relevantes de investimento são apresentadas ao cliente como sugestão e só são executadas após sua aprovação.</p>
-
-      <h2>4. Investimento em mídia</h2>
-      <p>O valor investido em anúncios é pago pelo cliente diretamente às plataformas (Google, Meta) e não se confunde com a remuneração pelos serviços da Égide Digital, salvo acordo diferente em contrato.</p>
-
-      <h2>5. Resultados</h2>
-      <p>Trabalhamos com boas práticas e acompanhamento contínuo para otimizar os resultados, mas o desempenho de campanhas depende de fatores externos, como concorrência, mercado, políticas e algoritmos das plataformas. Por isso, não garantimos volume específico de vendas, leads ou retorno financeiro.</p>
-
-      <h2>6. Responsabilidades do cliente</h2>
-      <p>O cliente é responsável pela veracidade das informações fornecidas, pela legalidade dos produtos e serviços anunciados, pelos materiais que nos entregar (textos, imagens, marcas) e pelo cumprimento das políticas de publicidade das plataformas e das normas do seu setor.</p>
-
-      <h2>7. Pagamento e cancelamento</h2>
-      <p>Valores, formas de pagamento e condições de cancelamento seguem o contratado com cada cliente. Serviços recorrentes podem ser cancelados mediante aviso prévio, conforme o contrato.</p>
-
-      <h2>8. Limitação de responsabilidade</h2>
-      <p>A Égide Digital não se responsabiliza por indisponibilidades, bloqueios, reprovações de anúncios ou alterações promovidas pelas plataformas de terceiros (Google, Meta e outras), nem por prejuízos indiretos decorrentes dessas situações.</p>
-
-      <h2>9. Propriedade intelectual</h2>
-      <p>Os materiais fornecidos pelo cliente permanecem de sua propriedade. Após a quitação dos valores devidos, os entregáveis produzidos especificamente para o cliente passam a ser de seu uso, salvo disposição diferente em contrato.</p>
-
-      <h2>10. Privacidade</h2>
-      <p>O tratamento de dados pessoais segue a nossa Política de Privacidade, disponível em <a href="/politica-de-privacidade/">egidedigital.com.br/politica-de-privacidade</a>.</p>
-
-      <h2>11. Alterações</h2>
-      <p>Estes termos podem ser atualizados periodicamente. A data da última atualização está sempre indicada no topo da página.</p>
-
-      <h2>12. Foro</h2>
-      <p>Fica eleito o foro da Comarca de Marabá-PA para dirimir quaisquer questões relativas a estes termos.</p>
-
-      <h2>13. Contato</h2>
-      <div class="contact">
-        <p><strong>G L DOS SANTOS, COMERCIO CONSULTORIA E SERVICOS LTDA (Égide Digital)</strong></p>
-        <p>CNPJ: 68.744.111/0001-46</p>
-        <p>Endereço: R Folha 27, nº 08, Quadra 07 Lote 08 Sala 02, Nova Marabá, Marabá-PA, CEP 68.509-160</p>
-        <p>E-mail: <a href="mailto:gabriel.limasantos222@gmail.com">gabriel.limasantos222@gmail.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/5594992669085">(94) 99266-9085</a></p>
-      </div>
-    </article>
+<main>
+<section style="background:#10222F;color:#EDF1F0;position:relative;overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;right:-160px;top:-160px;width:620px;height:620px;border-radius:50%;background:radial-gradient(closest-side,rgba(180,132,44,.26),transparent 70%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1120px;margin:0 auto;padding:clamp(40px,6vw,72px) 20px;display:flex;flex-direction:column;gap:14px">
+    <p style="font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B4842C">Institucional</p>
+    <h1 style="font-family:Marcellus,serif;font-size:clamp(30px,5vw,48px);line-height:1.1">Termos de Serviço</h1>
+    <p style="font-size:16px;color:#B9C6C4">Última atualização: 26 de setembro de 2026</p>
   </div>
+</section>
+<section style="background:#F3F5F4;padding:clamp(40px,6vw,72px) 20px">
+  <article class="doc"><p class="intro">Estes Termos de Serviço regulam a contratação e o uso dos serviços da Égide Digital, nome comercial de G L DOS SANTOS, COMERCIO CONSULTORIA E SERVICOS LTDA, inscrita no CNPJ 68.744.111/0001-46. Ao contratar nossos serviços ou utilizar este site, você concorda com estes termos.</p>
+<h2>1. Serviços</h2><p>A Égide Digital presta serviços de criação e manutenção de sites, hospedagem, gestão de tráfego pago (Google Ads e Meta Ads) e soluções digitais relacionadas. O escopo, os prazos e os valores de cada serviço são definidos na proposta ou contrato firmado com o cliente.</p>
+<h2>2. Acesso às contas de anúncios</h2><p>Para a gestão de tráfego, o cliente concede à Égide Digital acesso às suas contas de anúncios no Google Ads e/ou Meta Ads. Esse acesso é usado exclusivamente para planejar, criar, gerenciar, otimizar e gerar relatórios das campanhas do próprio cliente, conforme descrito na nossa <a href="/politica-de-privacidade/">Política de Privacidade</a>. O cliente pode revogar esse acesso a qualquer momento, diretamente nas plataformas.</p>
+<h2>3. Aprovação de alterações</h2><p>Criação de campanhas, definição de orçamentos e alterações relevantes de investimento são apresentadas ao cliente como sugestão e só são executadas após sua aprovação.</p>
+<h2>4. Investimento em mídia</h2><p>O valor investido em anúncios é pago pelo cliente diretamente às plataformas (Google, Meta) e não se confunde com a remuneração pelos serviços da Égide Digital, salvo acordo diferente em contrato.</p>
+<h2>5. Resultados</h2><p>Trabalhamos com boas práticas e acompanhamento contínuo para otimizar os resultados, mas o desempenho de campanhas depende de fatores externos, como concorrência, mercado, políticas e algoritmos das plataformas. Por isso, não garantimos volume específico de vendas, leads ou retorno financeiro.</p>
+<h2>6. Responsabilidades do cliente</h2><p>O cliente é responsável pela veracidade das informações fornecidas, pela legalidade dos produtos e serviços anunciados, pelos materiais que nos entregar (textos, imagens, marcas) e pelo cumprimento das políticas de publicidade das plataformas e das normas do seu setor.</p>
+<h2>7. Pagamento e cancelamento</h2><p>Valores, formas de pagamento e condições de cancelamento seguem o contratado com cada cliente. Serviços recorrentes podem ser cancelados mediante aviso prévio, conforme o contrato.</p>
+<h2>8. Limitação de responsabilidade</h2><p>A Égide Digital não se responsabiliza por indisponibilidades, bloqueios, reprovações de anúncios ou alterações promovidas pelas plataformas de terceiros (Google, Meta e outras), nem por prejuízos indiretos decorrentes dessas situações.</p>
+<h2>9. Propriedade intelectual</h2><p>Os materiais fornecidos pelo cliente permanecem de sua propriedade. Após a quitação dos valores devidos, os entregáveis produzidos especificamente para o cliente passam a ser de seu uso, salvo disposição diferente em contrato.</p>
+<h2>10. Privacidade</h2><p>O tratamento de dados pessoais segue a nossa Política de Privacidade, disponível em <a href="/politica-de-privacidade/">egidedigital.com.br/politica-de-privacidade</a>.</p>
+<h2>11. Alterações</h2><p>Estes termos podem ser atualizados periodicamente. A data da última atualização está sempre indicada no topo da página.</p>
+<h2>12. Foro</h2><p>Fica eleito o foro da Comarca de Marabá-PA para dirimir quaisquer questões relativas a estes termos.</p>
+<h2>13. Contato</h2><div class="contact"><p><strong>G L DOS SANTOS, COMERCIO CONSULTORIA E SERVICOS LTDA (Égide Digital)</strong></p><p>CNPJ: 68.744.111/0001-46</p><p>Endereço: R Folha 27, nº 08, Quadra 07 Lote 08 Sala 02, Nova Marabá, Marabá-PA, CEP 68.509-160</p><p>E-mail: <a href="mailto:gabriel.limasantos222@gmail.com">gabriel.limasantos222@gmail.com</a></p><p>WhatsApp: <a href="https://wa.me/5594992669085">(94) 99266-9085</a></p></div></article>
+</section>
 </main>
-
-<footer>
-  <div class="wrap">
-    <nav class="foot-nav" aria-label="Navegação do rodapé">
-      <a href="/">Criação de Sites</a>
-      <a href="/trafego-pago/">Tráfego Pago</a>
-      <a href="/secretaria/">SecretarIA</a>
-      <a href="/politica-de-privacidade/">Política de Privacidade</a>
-      <a href="/termos-de-servico/" aria-current="page">Termos de Serviço</a>
+<footer style="background:#0B161F;color:#B9C6C4;padding:clamp(40px,6vw,64px) 20px 32px">
+  <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:36px">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <a href="/#/" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#EDF1F0">
+        <svg width="26" height="31" viewBox="0 0 34 40" fill="none" aria-hidden="true"><path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2"></path><path d="M17 9v22M9.5 15.5 17 12l7.5 3.5" stroke="#B4842C" stroke-width="1.6" stroke-linecap="round"></path></svg>
+        <span style="font-family:Marcellus,serif;font-size:16px;letter-spacing:.14em;text-transform:uppercase">Égide <span style="color:#B4842C">Digital</span></span>
+      </a>
+      <p style="font-size:15px;line-height:1.6;max-width:36ch">Sites, atendimento com IA no WhatsApp e tráfego pago. Tecnologia própria para empresas de todo o Brasil.</p>
+    </div>
+    <nav aria-label="Serviços" style="display:flex;flex-direction:column;gap:10px">
+      <span style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#8FA0A5;margin-bottom:4px">Serviços</span>
+      <a href="/#/sites" style="color:#EDF1F0;text-decoration:none;font-size:15px;padding:4px 0" class="egh10">Criação de Sites</a>
+      <a href="/#/secretaria" style="color:#EDF1F0;text-decoration:none;font-size:15px;padding:4px 0" class="egh10">SecretarIA</a>
+      <a href="/#/trafego-pago" style="color:#EDF1F0;text-decoration:none;font-size:15px;padding:4px 0" class="egh10">Tráfego Pago</a>
     </nav>
-    <p class="fine">Égide Digital · G L DOS SANTOS, COMERCIO CONSULTORIA E SERVICOS LTDA · CNPJ 68.744.111/0001-46 · R Folha 27, nº 08, Quadra 07 Lote 08, Sala 02 — Nova Marabá, Marabá-PA, CEP 68.509-160 · egidedigital.com.br</p>
+    <nav aria-label="Institucional" style="display:flex;flex-direction:column;gap:10px">
+      <span style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#8FA0A5;margin-bottom:4px">Institucional</span>
+      <a href="/politica-de-privacidade/" style="color:#EDF1F0;text-decoration:none;font-size:15px;padding:4px 0" class="egh10">Política de Privacidade</a>
+      <a href="/termos-de-servico/" style="color:#EDF1F0;text-decoration:none;font-size:15px;padding:4px 0" class="egh10">Termos de Serviço</a>
+      <a href="https://www.instagram.com/egidedigital/" target="_blank" rel="noopener" style="color:#EDF1F0;text-decoration:none;font-size:15px;padding:4px 0;display:inline-flex;align-items:center;gap:8px" class="egh10"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"></circle></svg>Instagram</a>
+    </nav>
   </div>
+  <p style="max-width:1120px;margin:36px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);font-size:13px;line-height:1.6;color:#8FA0A5">Égide Digital · G L DOS SANTOS, COMERCIO CONSULTORIA E SERVICOS LTDA · CNPJ 68.744.111/0001-46 · R Folha 27, nº 08, Quadra 07 Lote 08, Sala 02 — Nova Marabá, Marabá-PA, CEP 68.509-160 · egidedigital.com.br</p>
 </footer>
-
 </body>
 </html>

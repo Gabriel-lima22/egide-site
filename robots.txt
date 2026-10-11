@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /secretaria/
+Disallow: /trafego-pago/
+Disallow: /sites/
+
+Sitemap: https://egidedigital.com.br/sitemap.xml
