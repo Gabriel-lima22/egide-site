@@ -103,7 +103,14 @@ img{max-width:100%}
 </style>
 <!-- Umami Analytics (self-hosted) -->
 <script defer src="https://analytics.egidedigital.com.br/script.js" data-website-id="bfe900ee-d585-4514-bb2a-141f4b0569f7"></script>
-<script defer src="https://analytics.egidedigital.com.br/recorder.js" data-website-id="bfe900ee-d585-4514-bb2a-141f4b0569f7"></script>
+<script>
+// Mapa de calor do Umami: carregado só depois do load, no primeiro momento ocioso (não pesa na abertura da página).
+(function(){
+  function carregar(){var s=document.createElement('script');s.src='https://analytics.egidedigital.com.br/recorder.js';s.setAttribute('data-website-id','bfe900ee-d585-4514-bb2a-141f4b0569f7');document.head.appendChild(s)}
+  function quandoOcioso(){if('requestIdleCallback' in window)requestIdleCallback(carregar,{timeout:3000});else setTimeout(carregar,1)}
+  if(document.readyState==='complete')quandoOcioso();else window.addEventListener('load',quandoOcioso)
+})();
+</script>
 </head>
 <body>
 <header style="position:sticky;top:0;z-index:50;background:rgba(16,34,47,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)">

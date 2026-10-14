@@ -91,7 +91,14 @@ img{max-width:100%}
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://egidedigital.com.br/secretaria/","url":"https://egidedigital.com.br/secretaria/","name":"SecretarIA — Atendimento automatizado no WhatsApp | Égide Digital","description":"Plataforma de atendimento automatizado no WhatsApp para clínicas e empresas. Responde, qualifica e agenda 24 horas por dia. Desenvolvida em Marabá-PA.","inLanguage":"pt-BR","isPartOf":{"@id":"https://egidedigital.com.br/#site"},"about":{"@id":"https://egidedigital.com.br/secretaria/#service"}},{"@type":"Service","name":"SecretarIA","description":"Atendimento automatizado no WhatsApp que responde, qualifica e agenda 24 horas por dia.","@id":"https://egidedigital.com.br/secretaria/#service","url":"https://egidedigital.com.br/secretaria/","provider":{"@id":"https://egidedigital.com.br/#org"},"areaServed":{"@type":"Country","name":"Brasil"},"offers":{"@type":"Offer","price":"397","priceCurrency":"BRL"}},{"@type":"Organization","@id":"https://egidedigital.com.br/#org","name":"Égide Digital","url":"https://egidedigital.com.br/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://egidedigital.com.br/"},{"@type":"ListItem","position":2,"name":"SecretarIA","item":"https://egidedigital.com.br/secretaria/"}]}]}</script>
 <!-- Umami Analytics (self-hosted) -->
 <script defer src="https://analytics.egidedigital.com.br/script.js" data-website-id="bfe900ee-d585-4514-bb2a-141f4b0569f7"></script>
-<script defer src="https://analytics.egidedigital.com.br/recorder.js" data-website-id="bfe900ee-d585-4514-bb2a-141f4b0569f7"></script>
+<script>
+// Mapa de calor do Umami: carregado só depois do load, no primeiro momento ocioso (não pesa na abertura da página).
+(function(){
+  function carregar(){var s=document.createElement('script');s.src='https://analytics.egidedigital.com.br/recorder.js';s.setAttribute('data-website-id','bfe900ee-d585-4514-bb2a-141f4b0569f7');document.head.appendChild(s)}
+  function quandoOcioso(){if('requestIdleCallback' in window)requestIdleCallback(carregar,{timeout:3000});else setTimeout(carregar,1)}
+  if(document.readyState==='complete')quandoOcioso();else window.addEventListener('load',quandoOcioso)
+})();
+</script>
 </head>
 <body>
 <div style="min-height:100vh;display:flex;flex-direction:column">
