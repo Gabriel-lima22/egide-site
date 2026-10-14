@@ -21,14 +21,19 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/marcellus-400.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* Fontes servidas pelo próprio site (subset latin, inclui acentos do português) */
+@font-face{font-family:Archivo;font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/archivo-var.woff2) format('woff2')}
+@font-face{font-family:Marcellus;font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/marcellus-400.woff2) format('woff2')}
+/* Fallbacks com métricas ajustadas: o texto não muda de tamanho quando a fonte real chega */
+@font-face{font-family:'Archivo Fallback';src:local('Arial'),local('Liberation Sans'),local('Roboto');size-adjust:101.95%;ascent-override:86.12%;descent-override:20.60%;line-gap-override:0%}
+@font-face{font-family:'Marcellus Fallback';src:local('Times New Roman'),local('Liberation Serif'),local('Noto Serif');size-adjust:112.76%;ascent-override:86.39%;descent-override:24.81%;line-gap-override:0%}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:#F3F5F4;color:#10222F;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:#F3F5F4;color:#10222F;font-family:Archivo,'Archivo Fallback',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 @media (max-width:860px){html{scrollbar-width:none}html::-webkit-scrollbar{display:none}}
 a{color:#8F661C}a:hover{color:#B4842C}
 h1,h2,h3,p{margin:0}
@@ -68,16 +73,16 @@ h1,h2,h3,p{margin:0}
 @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none}*{animation:none!important}}
 
 .egh1:hover{color:#EDF1F0 !important}
-.egh2:hover{transform:translateY(-1px) !important;color:#fff !important}
-.egh3:hover{transform:translateY(-2px) !important;box-shadow:0 18px 34px -10px rgba(180,132,44,.75) !important;color:#fff !important}
+.egh2:hover{transform:translateY(-1px) !important}
+.egh3:hover{transform:translateY(-2px) !important;box-shadow:0 18px 34px -10px rgba(180,132,44,.75) !important}
 .egh4:hover{border-color:#B4842C !important;color:#EDF1F0 !important}
 .egb5::before{content:'';position:absolute;top:-4px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#D9A845;box-shadow:0 0 12px 2px rgba(217,168,69,.8)}
 .egh6:hover{box-shadow:0 30px 60px -28px rgba(16,34,47,.35) !important;color:#10222F !important}
 .egb7::before{content:'';position:absolute;inset:0;border-radius:50%;background:#3DBE7A;animation:egPulse 1.8s ease-out infinite}
-.egh8:hover{transform:translateY(-2px) !important;color:#fff !important}
+.egh8:hover{transform:translateY(-2px) !important}
 .egh9:hover{background:#10222F !important;color:#fff !important}
 .egh10:hover{color:#B4842C !important}
-.egh11:hover{transform:scale(1.06) !important;color:#fff !important}
+.egh11:hover{transform:scale(1.06) !important}
 [data-page]{display:none}[data-page="home"]{display:contents}
 @media (max-width:859px){.eg-desk{display:none!important}}@media (min-width:860px){.eg-mob{display:none!important}}
 #servicos,#planos,#planos-sites,#servicos-trafego,#planos-trafego{scroll-margin-top:84px}
@@ -86,7 +91,7 @@ img{max-width:100%}
 <style>
 .doc{background:#fff;border:1px solid #DDE3E2;border-radius:20px;padding:clamp(24px,5vw,40px);max-width:760px;margin:0 auto}
 .doc .intro{color:#3B4B57;font-size:17px;line-height:1.65}
-.doc h2{font-family:Marcellus,serif;font-size:22px;font-weight:400;margin:34px 0 10px;padding-top:24px;border-top:1px solid #DDE3E2}
+.doc h2{font-family:Marcellus,'Marcellus Fallback',serif;font-size:22px;font-weight:400;margin:34px 0 10px;padding-top:24px;border-top:1px solid #DDE3E2}
 .doc p{color:#3B4B57;font-size:16px;line-height:1.65}.doc p+p{margin-top:12px}
 .doc ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .doc li{color:#3B4B57;font-size:16px;line-height:1.6;padding-left:22px;position:relative}
@@ -105,7 +110,7 @@ img{max-width:100%}
   <div style="max-width:1120px;margin:0 auto;padding:0 20px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px">
     <a href="/" aria-label="Égide Digital — início" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#EDF1F0">
       <svg width="30" height="36" viewBox="0 0 34 40" fill="none" aria-hidden="true"><path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2"></path><path d="M17 9v22M9.5 15.5 17 12l7.5 3.5" stroke="#B4842C" stroke-width="1.6" stroke-linecap="round"></path></svg>
-      <span style="font-family:Marcellus,serif;font-size:17px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap">Égide <span style="color:#B4842C">Digital</span></span>
+      <span style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:17px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap">Égide <span style="color:#C99A3E">Digital</span></span>
     </a>
     <a href="/" style="display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;white-space:nowrap;flex:none;border-radius:10px;border:1px solid rgba(255,255,255,.22);color:#EDF1F0;font-weight:600;font-size:14px;text-decoration:none">Voltar ao site</a>
   </div>
@@ -115,7 +120,7 @@ img{max-width:100%}
   <div aria-hidden="true" style="position:absolute;right:-160px;top:-160px;width:620px;height:620px;border-radius:50%;background:radial-gradient(closest-side,rgba(180,132,44,.26),transparent 70%);pointer-events:none"></div>
   <div style="position:relative;max-width:1120px;margin:0 auto;padding:clamp(40px,6vw,72px) 20px;display:flex;flex-direction:column;gap:14px">
     <p style="font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B4842C">Institucional</p>
-    <h1 style="font-family:Marcellus,serif;font-size:clamp(30px,5vw,48px);line-height:1.1">Termos de Serviço</h1>
+    <h1 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(30px,5vw,48px);line-height:1.1">Termos de Serviço</h1>
     <p style="font-size:16px;color:#B9C6C4">Última atualização: 26 de setembro de 2026</p>
   </div>
 </section>
@@ -141,7 +146,7 @@ img{max-width:100%}
     <div style="display:flex;flex-direction:column;gap:14px">
       <a href="/" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#EDF1F0">
         <svg width="26" height="31" viewBox="0 0 34 40" fill="none" aria-hidden="true"><path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2"></path><path d="M17 9v22M9.5 15.5 17 12l7.5 3.5" stroke="#B4842C" stroke-width="1.6" stroke-linecap="round"></path></svg>
-        <span style="font-family:Marcellus,serif;font-size:16px;letter-spacing:.14em;text-transform:uppercase">Égide <span style="color:#B4842C">Digital</span></span>
+        <span style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:16px;letter-spacing:.14em;text-transform:uppercase">Égide <span style="color:#C99A3E">Digital</span></span>
       </a>
       <p style="font-size:15px;line-height:1.6;max-width:36ch">Sites, atendimento com IA no WhatsApp e tráfego pago. Tecnologia própria para empresas de todo o Brasil.</p>
     </div>

@@ -21,14 +21,19 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/marcellus-400.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* Fontes servidas pelo próprio site (subset latin, inclui acentos do português) */
+@font-face{font-family:Archivo;font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/archivo-var.woff2) format('woff2')}
+@font-face{font-family:Marcellus;font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/marcellus-400.woff2) format('woff2')}
+/* Fallbacks com métricas ajustadas: o texto não muda de tamanho quando a fonte real chega */
+@font-face{font-family:'Archivo Fallback';src:local('Arial'),local('Liberation Sans'),local('Roboto');size-adjust:101.95%;ascent-override:86.12%;descent-override:20.60%;line-gap-override:0%}
+@font-face{font-family:'Marcellus Fallback';src:local('Times New Roman'),local('Liberation Serif'),local('Noto Serif');size-adjust:112.76%;ascent-override:86.39%;descent-override:24.81%;line-gap-override:0%}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:#F3F5F4;color:#10222F;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:#F3F5F4;color:#10222F;font-family:Archivo,'Archivo Fallback',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 @media (max-width:860px){html{scrollbar-width:none}html::-webkit-scrollbar{display:none}}
 a{color:#8F661C}a:hover{color:#B4842C}
 h1,h2,h3,p{margin:0}
@@ -68,16 +73,16 @@ h1,h2,h3,p{margin:0}
 @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none}*{animation:none!important}}
 
 .egh1:hover{color:#EDF1F0 !important}
-.egh2:hover{transform:translateY(-1px) !important;color:#fff !important}
-.egh3:hover{transform:translateY(-2px) !important;box-shadow:0 18px 34px -10px rgba(180,132,44,.75) !important;color:#fff !important}
+.egh2:hover{transform:translateY(-1px) !important}
+.egh3:hover{transform:translateY(-2px) !important;box-shadow:0 18px 34px -10px rgba(180,132,44,.75) !important}
 .egh4:hover{border-color:#B4842C !important;color:#EDF1F0 !important}
 .egb5::before{content:'';position:absolute;top:-4px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#D9A845;box-shadow:0 0 12px 2px rgba(217,168,69,.8)}
 .egh6:hover{box-shadow:0 30px 60px -28px rgba(16,34,47,.35) !important;color:#10222F !important}
 .egb7::before{content:'';position:absolute;inset:0;border-radius:50%;background:#3DBE7A;animation:egPulse 1.8s ease-out infinite}
-.egh8:hover{transform:translateY(-2px) !important;color:#fff !important}
+.egh8:hover{transform:translateY(-2px) !important}
 .egh9:hover{background:#10222F !important;color:#fff !important}
 .egh10:hover{color:#B4842C !important}
-.egh11:hover{transform:scale(1.06) !important;color:#fff !important}
+.egh11:hover{transform:scale(1.06) !important}
 [data-page]{display:contents}
 @media (max-width:859px){.eg-desk{display:none!important}}@media (min-width:860px){.eg-mob{display:none!important}}
 #servicos,#planos,#planos-sites,#servicos-trafego,#planos-trafego{scroll-margin-top:84px}
@@ -95,14 +100,14 @@ img{max-width:100%}
   <div style="max-width:1120px;margin:0 auto;padding:0 20px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px">
     <a href="/" onclick="EG.closeMenu()" aria-label="Égide Digital — início" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#EDF1F0">
       <svg width="30" height="36" viewBox="0 0 34 40" fill="none" aria-hidden="true"><path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2"></path><path d="M17 9v22M9.5 15.5 17 12l7.5 3.5" stroke="#B4842C" stroke-width="1.6" stroke-linecap="round"></path></svg>
-      <span style="font-family:Marcellus,serif;font-size:17px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap">Égide <span style="color:#B4842C">Digital</span></span>
+      <span style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:17px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap">Égide <span style="color:#C99A3E">Digital</span></span>
     </a>
     <span class="eg-desk" style="display:contents">
       <nav aria-label="Navegação principal" style="display:flex;align-items:center;gap:28px">
         <a href="/sites/" style="color:#B9C6C4;text-decoration:none;font-size:15px;font-weight:500;padding:8px 0" class="egh1">Criação de Sites</a>
         <a href="/secretaria/" style="color:#B9C6C4;text-decoration:none;font-size:15px;font-weight:500;padding:8px 0" class="egh1">SecretarIA</a>
         <a href="/trafego-pago/" style="color:#B9C6C4;text-decoration:none;font-size:15px;font-weight:500;padding:8px 0" class="egh1">Tráfego Pago</a>
-        <a href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20%C3%89gide%20Digital%20e%20quero%20saber%20mais." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 18px;border-radius:10px;background:#B4842C;color:#fff;font-weight:600;font-size:14px;text-decoration:none;transition:transform .2s" class="egh2">Falar no WhatsApp</a>
+        <a href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20%C3%89gide%20Digital%20e%20quero%20saber%20mais." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 18px;border-radius:10px;background:#B4842C;color:#10222F;font-weight:600;font-size:14px;text-decoration:none;transition:transform .2s" class="egh2">Falar no WhatsApp</a>
       </nav>
     </span>
     <span class="eg-mob" style="display:contents">
@@ -118,7 +123,7 @@ img{max-width:100%}
       <a href="/sites/" onclick="EG.closeMenu()" style="color:#EDF1F0;text-decoration:none;font-size:18px;font-weight:500;padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.08)">Criação de Sites</a>
       <a href="/secretaria/" onclick="EG.closeMenu()" style="color:#EDF1F0;text-decoration:none;font-size:18px;font-weight:500;padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.08)">SecretarIA</a>
       <a href="/trafego-pago/" onclick="EG.closeMenu()" style="color:#EDF1F0;text-decoration:none;font-size:18px;font-weight:500;padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.08)">Tráfego Pago</a>
-      <a href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20%C3%89gide%20Digital%20e%20quero%20saber%20mais." target="_blank" rel="noopener" style="margin-top:16px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;border-radius:12px;background:#B4842C;color:#fff;font-weight:600;font-size:16px;text-decoration:none">Falar no WhatsApp</a>
+      <a href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20%C3%89gide%20Digital%20e%20quero%20saber%20mais." target="_blank" rel="noopener" style="margin-top:16px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;border-radius:12px;background:#B4842C;color:#10222F;font-weight:600;font-size:16px;text-decoration:none">Falar no WhatsApp</a>
     </nav>
   </span>
 </header>
@@ -132,10 +137,10 @@ img{max-width:100%}
     <div style="position:relative;max-width:1120px;margin:0 auto;padding:clamp(48px,7vw,96px) 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(32px,6vw,64px);align-items:center">
       <div style="display:flex;flex-direction:column;gap:20px;max-width:560px">
         <p style="font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B4842C;animation:egRise .6s ease both">Tráfego Pago</p>
-        <h1 style="font-family:Marcellus,serif;font-size:clamp(30px,5.4vw,56px);line-height:1.1;text-wrap:pretty;animation:egRise .7s .08s ease both">Anúncios no Google e no Meta que viram conversa no WhatsApp.</h1>
+        <h1 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(30px,5.4vw,56px);line-height:1.1;text-wrap:pretty;animation:egRise .7s .08s ease both">Anúncios no Google e no Meta que viram conversa no WhatsApp.</h1>
         <p style="font-size:clamp(16px,1.6vw,19px);line-height:1.6;color:#B9C6C4;text-wrap:pretty;animation:egRise .7s .16s ease both">Campanhas planejadas, publicadas e otimizadas todos os dias para atrair clientes qualificados — medidas pelo que importa: quantos contatos viraram clientes e quanto custou cada um.</p>
         <div style="display:flex;flex-wrap:wrap;gap:12px;animation:egRise .7s .24s ease both">
-          <a href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20gest%C3%A3o%20de%20tr%C3%A1fego%20pago." target="_blank" rel="noopener" style="flex:1 1 200px;max-width:360px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:12px;background:#B4842C;color:#fff;font-weight:600;font-size:16px;text-decoration:none;box-shadow:0 12px 28px -10px rgba(180,132,44,.65);transition:transform .2s" class="egh8">Solicitar diagnóstico gratuito</a>
+          <a href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20gest%C3%A3o%20de%20tr%C3%A1fego%20pago." target="_blank" rel="noopener" style="flex:1 1 200px;max-width:360px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:12px;background:#B4842C;color:#10222F;font-weight:600;font-size:16px;text-decoration:none;box-shadow:0 12px 28px -10px rgba(180,132,44,.65);transition:transform .2s" class="egh8">Solicitar diagnóstico gratuito</a>
           <a href="#servicos-trafego" style="flex:1 1 200px;max-width:360px;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:12px;border:1px solid rgba(255,255,255,.22);color:#EDF1F0;font-weight:600;font-size:16px;text-decoration:none" class="egh4">O que está incluído</a>
         </div>
         <p style="font-size:14px;color:#8FA0A5;display:flex;flex-wrap:wrap;gap:6px 14px;animation:egRise .7s .32s ease both"><span>Google Ads</span><span aria-hidden="true">·</span><span>Meta Ads</span><span aria-hidden="true">·</span><span>Rastreamento até o WhatsApp</span></p>
@@ -168,9 +173,9 @@ img{max-width:100%}
 </div>
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,130px),1fr));gap:10px;animation:egDash 12s ease infinite">
-            <div style="display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:12px;background:rgba(255,255,255,.04)"><span style="font-size:11px;color:#8FA0A5">Cliques</span><span data-ref="clicks" style="font-family:Marcellus,serif;font-size:clamp(20px,2.2vw,26px);line-height:1">0</span></div>
-            <div style="display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:12px;background:rgba(180,132,44,.14);border:1px solid rgba(180,132,44,.35)"><span style="font-size:11px;color:#D9A845">Leads no WhatsApp</span><span data-ref="leads" style="font-family:Marcellus,serif;font-size:clamp(20px,2.2vw,26px);line-height:1;color:#D9A845">0</span></div>
-            <div style="display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:12px;background:rgba(255,255,255,.04)"><span style="font-size:11px;color:#8FA0A5">Custo por lead</span><span data-ref="cpl" style="font-family:Marcellus,serif;font-size:clamp(20px,2.2vw,26px);line-height:1">—</span></div>
+            <div style="display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:12px;background:rgba(255,255,255,.04)"><span style="font-size:11px;color:#8FA0A5">Cliques</span><span data-ref="clicks" style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(20px,2.2vw,26px);line-height:1">0</span></div>
+            <div style="display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:12px;background:rgba(180,132,44,.14);border:1px solid rgba(180,132,44,.35)"><span style="font-size:11px;color:#D9A845">Leads no WhatsApp</span><span data-ref="leads" style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(20px,2.2vw,26px);line-height:1;color:#D9A845">0</span></div>
+            <div style="display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:12px;background:rgba(255,255,255,.04)"><span style="font-size:11px;color:#8FA0A5">Custo por lead</span><span data-ref="cpl" style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(20px,2.2vw,26px);line-height:1">—</span></div>
           </div>
           <svg viewBox="0 0 280 80" style="width:100%;height:auto;display:block" aria-hidden="true">
             <defs><linearGradient id="egAreaG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9A845" stop-opacity=".35"></stop><stop offset="1" stop-color="#D9A845" stop-opacity="0"></stop></linearGradient></defs>
@@ -187,7 +192,7 @@ img{max-width:100%}
               <span style="display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:12px 12px 12px 3px;background:#1F6F5A;color:#EDF1F0;font-size:12px;line-height:1.3;max-width:100%;animation:egLead5 12s ease both infinite"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"></path></svg>Pode me passar o endereço?</span>
             </div>
           </div>
-          <span style="font-size:11px;color:#6E8089;text-align:right">Painel ilustrativo</span>
+          <span style="font-size:11px;color:#8A9AA2;text-align:right">Painel ilustrativo</span>
         </div>
       </div>
     </div>
@@ -197,7 +202,7 @@ img{max-width:100%}
     <div style="max-width:1120px;margin:0 auto">
       <div data-reveal style="max-width:640px;display:flex;flex-direction:column;gap:12px">
         <p style="font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#8F661C">Do anúncio ao cliente</p>
-        <h2 style="font-family:Marcellus,serif;font-size:clamp(28px,4vw,40px);line-height:1.12;text-wrap:pretty">Cada real investido tem um caminho rastreado.</h2>
+        <h2 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(28px,4vw,40px);line-height:1.12;text-wrap:pretty">Cada real investido tem um caminho rastreado.</h2>
         <p style="font-size:17px;line-height:1.6;color:#3B4B57;text-wrap:pretty">Acompanhamos o lead do clique no anúncio até a conversa no WhatsApp. Assim sabemos qual campanha trouxe cliente de verdade, e não só visita.</p>
       </div>
       <div data-reveal style="position:relative;margin-top:44px">
@@ -209,10 +214,10 @@ img{max-width:100%}
           </div>
         </span>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px;position:relative">
-          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px"><span style="width:80px;height:80px;border-radius:50%;background:#10222F;display:grid;place-items:center;animation:egStage 6s ease-in-out infinite"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11v2a1 1 0 0 0 1 1h3l6 4V6L8 10H5a1 1 0 0 0-1 1Z" stroke="#D9A845" stroke-width="1.8" stroke-linejoin="round"></path><path d="M17 9a4 4 0 0 1 0 6" stroke="#D9A845" stroke-width="1.8" stroke-linecap="round"></path></svg></span><h3 style="font-family:Marcellus,serif;font-size:20px">Anúncio</h3><p style="font-size:15px;line-height:1.5;color:#3B4B57">No Google, quando procuram; no Instagram e Facebook, para gerar demanda.</p></div>
-          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px"><span style="width:80px;height:80px;border-radius:50%;background:#10222F;display:grid;place-items:center;animation:egStage 6s 1.5s ease-in-out infinite"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4l12 8-5 1.5L10 19 6 4Z" stroke="#D9A845" stroke-width="1.8" stroke-linejoin="round"></path></svg></span><h3 style="font-family:Marcellus,serif;font-size:20px">Clique</h3><p style="font-size:15px;line-height:1.5;color:#3B4B57">Rastreado de ponta a ponta, com origem e campanha identificadas.</p></div>
-          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px"><span style="width:80px;height:80px;border-radius:50%;background:#10222F;display:grid;place-items:center;animation:egStage 6s 3s ease-in-out infinite"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" stroke="#D9A845" stroke-width="1.8" stroke-linejoin="round"></path></svg></span><h3 style="font-family:Marcellus,serif;font-size:20px">Conversa no WhatsApp</h3><p style="font-size:15px;line-height:1.5;color:#3B4B57">O lead chega direto no seu atendimento, pronto para ser respondido.</p></div>
-          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px"><span style="width:80px;height:80px;border-radius:50%;background:#B4842C;display:grid;place-items:center;animation:egStage 6s 4.5s ease-in-out infinite"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><h3 style="font-family:Marcellus,serif;font-size:20px">Cliente</h3><p style="font-size:15px;line-height:1.5;color:#3B4B57">Medimos quantos contatos fecharam e quanto custou cada um.</p></div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px"><span style="width:80px;height:80px;border-radius:50%;background:#10222F;display:grid;place-items:center;animation:egStage 6s ease-in-out infinite"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11v2a1 1 0 0 0 1 1h3l6 4V6L8 10H5a1 1 0 0 0-1 1Z" stroke="#D9A845" stroke-width="1.8" stroke-linejoin="round"></path><path d="M17 9a4 4 0 0 1 0 6" stroke="#D9A845" stroke-width="1.8" stroke-linecap="round"></path></svg></span><h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:20px">Anúncio</h3><p style="font-size:15px;line-height:1.5;color:#3B4B57">No Google, quando procuram; no Instagram e Facebook, para gerar demanda.</p></div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px"><span style="width:80px;height:80px;border-radius:50%;background:#10222F;display:grid;place-items:center;animation:egStage 6s 1.5s ease-in-out infinite"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4l12 8-5 1.5L10 19 6 4Z" stroke="#D9A845" stroke-width="1.8" stroke-linejoin="round"></path></svg></span><h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:20px">Clique</h3><p style="font-size:15px;line-height:1.5;color:#3B4B57">Rastreado de ponta a ponta, com origem e campanha identificadas.</p></div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px"><span style="width:80px;height:80px;border-radius:50%;background:#10222F;display:grid;place-items:center;animation:egStage 6s 3s ease-in-out infinite"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" stroke="#D9A845" stroke-width="1.8" stroke-linejoin="round"></path></svg></span><h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:20px">Conversa no WhatsApp</h3><p style="font-size:15px;line-height:1.5;color:#3B4B57">O lead chega direto no seu atendimento, pronto para ser respondido.</p></div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px"><span style="width:80px;height:80px;border-radius:50%;background:#B4842C;display:grid;place-items:center;animation:egStage 6s 4.5s ease-in-out infinite"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:20px">Cliente</h3><p style="font-size:15px;line-height:1.5;color:#3B4B57">Medimos quantos contatos fecharam e quanto custou cada um.</p></div>
         </div>
       </div>
     </div>
@@ -222,7 +227,7 @@ img{max-width:100%}
     <div data-reveal style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,5vw,64px)">
       <div style="display:flex;flex-direction:column;gap:12px">
         <p style="font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#8F661C">O que fazemos</p>
-        <h2 style="font-family:Marcellus,serif;font-size:clamp(28px,4vw,40px);line-height:1.12;text-wrap:pretty">Anúncios geridos de ponta a ponta</h2>
+        <h2 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(28px,4vw,40px);line-height:1.12;text-wrap:pretty">Anúncios geridos de ponta a ponta</h2>
       </div>
       <p style="font-size:17px;line-height:1.65;color:#3B4B57;text-wrap:pretty;align-self:center">A Égide Digital planeja, executa e gerencia campanhas de anúncios pagos para empresas e profissionais liberais, cuidando de toda a operação: da estruturação inicial ao acompanhamento diário de resultados.</p>
     </div>
@@ -232,14 +237,14 @@ img{max-width:100%}
     <div style="max-width:1120px;margin:0 auto">
       <div data-reveal style="display:flex;flex-direction:column;gap:12px;max-width:620px">
         <p id="servicos-trafego" style="font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#8F661C;scroll-margin-top:90px">Serviços</p>
-        <h2 style="font-family:Marcellus,serif;font-size:clamp(28px,4vw,40px);line-height:1.12">O que está incluído</h2>
+        <h2 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(28px,4vw,40px);line-height:1.12">O que está incluído</h2>
         <p style="font-size:17px;line-height:1.6;color:#3B4B57">Cada frente da operação é conduzida pela Égide, com acesso e transparência para você acompanhar.</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px;margin-top:36px">
-        <div data-reveal style="background:#F3F5F4;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><h3 style="font-family:Marcellus,serif;font-size:21px">Google Ads</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Campanhas de pesquisa para aparecer exatamente quando o cliente procura pelo seu serviço, com gestão contínua de palavras-chave e negativações.</p></div>
-        <div data-reveal style="background:#F3F5F4;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><h3 style="font-family:Marcellus,serif;font-size:21px">Meta Ads</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Anúncios no Instagram e no Facebook para gerar demanda, fortalecer a marca e fazer remarketing de quem já demonstrou interesse.</p></div>
-        <div data-reveal style="background:#F3F5F4;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><h3 style="font-family:Marcellus,serif;font-size:21px">Rastreamento de conversões</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Acompanhamos o caminho completo do lead, do clique no anúncio até o atendimento no WhatsApp, para saber o que realmente gera clientes.</p></div>
-        <div data-reveal style="background:#F3F5F4;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><h3 style="font-family:Marcellus,serif;font-size:21px">Relatórios de desempenho</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Relatórios claros com investimento, custo por lead e resultados de cada campanha.</p></div>
+        <div data-reveal style="background:#F3F5F4;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:21px">Google Ads</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Campanhas de pesquisa para aparecer exatamente quando o cliente procura pelo seu serviço, com gestão contínua de palavras-chave e negativações.</p></div>
+        <div data-reveal style="background:#F3F5F4;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:21px">Meta Ads</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Anúncios no Instagram e no Facebook para gerar demanda, fortalecer a marca e fazer remarketing de quem já demonstrou interesse.</p></div>
+        <div data-reveal style="background:#F3F5F4;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:21px">Rastreamento de conversões</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Acompanhamos o caminho completo do lead, do clique no anúncio até o atendimento no WhatsApp, para saber o que realmente gera clientes.</p></div>
+        <div data-reveal style="background:#F3F5F4;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:21px">Relatórios de desempenho</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Relatórios claros com investimento, custo por lead e resultados de cada campanha.</p></div>
       </div>
     </div>
   </section>
@@ -248,17 +253,17 @@ img{max-width:100%}
     <div style="max-width:1120px;margin:0 auto">
       <div data-reveal style="display:flex;flex-direction:column;gap:12px;max-width:620px">
         <p style="font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#8F661C">Como trabalhamos</p>
-        <h2 style="font-family:Marcellus,serif;font-size:clamp(28px,4vw,40px);line-height:1.12">Da estruturação à otimização</h2>
+        <h2 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(28px,4vw,40px);line-height:1.12">Da estruturação à otimização</h2>
         <p style="font-size:17px;line-height:1.6;color:#3B4B57">Um processo em quatro etapas, do primeiro diagnóstico ao ajuste fino de todo dia.</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:20px;margin-top:36px">
-        <div data-reveal style="background:#fff;border:1px solid #DDE3E2;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:Marcellus,serif;font-size:14px;color:#8F661C;letter-spacing:.1em">01</span><h3 style="font-family:Marcellus,serif;font-size:21px">Diagnóstico</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Entendemos seu negócio, seu público e seus objetivos.</p></div>
-        <div data-reveal style="background:#fff;border:1px solid #DDE3E2;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:Marcellus,serif;font-size:14px;color:#8F661C;letter-spacing:.1em">02</span><h3 style="font-family:Marcellus,serif;font-size:21px">Estruturação</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Montamos as campanhas, os públicos e o rastreamento.</p></div>
-        <div data-reveal style="background:#fff;border:1px solid #DDE3E2;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:Marcellus,serif;font-size:14px;color:#8F661C;letter-spacing:.1em">03</span><h3 style="font-family:Marcellus,serif;font-size:21px">Gestão diária</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Acompanhamos os números e ajustamos lances, orçamentos e palavras-chave.</p></div>
-        <div data-reveal style="background:#fff;border:1px solid #DDE3E2;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:Marcellus,serif;font-size:14px;color:#8F661C;letter-spacing:.1em">04</span><h3 style="font-family:Marcellus,serif;font-size:21px">Otimização contínua</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Cortamos o que só gasta e reforçamos o que traz cliente.</p></div>
+        <div data-reveal style="background:#fff;border:1px solid #DDE3E2;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:14px;color:#8F661C;letter-spacing:.1em">01</span><h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:21px">Diagnóstico</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Entendemos seu negócio, seu público e seus objetivos.</p></div>
+        <div data-reveal style="background:#fff;border:1px solid #DDE3E2;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:14px;color:#8F661C;letter-spacing:.1em">02</span><h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:21px">Estruturação</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Montamos as campanhas, os públicos e o rastreamento.</p></div>
+        <div data-reveal style="background:#fff;border:1px solid #DDE3E2;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:14px;color:#8F661C;letter-spacing:.1em">03</span><h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:21px">Gestão diária</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Acompanhamos os números e ajustamos lances, orçamentos e palavras-chave.</p></div>
+        <div data-reveal style="background:#fff;border:1px solid #DDE3E2;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:14px;color:#8F661C;letter-spacing:.1em">04</span><h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:21px">Otimização contínua</h3><p style="font-size:15px;line-height:1.6;color:#3B4B57">Cortamos o que só gasta e reforçamos o que traz cliente.</p></div>
       </div>
       <div data-reveal style="margin-top:36px;background:#10222F;color:#EDF1F0;border-radius:20px;padding:clamp(28px,4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px;align-items:center">
-        <h3 style="font-family:Marcellus,serif;font-size:clamp(26px,3.2vw,34px);line-height:1.15;text-wrap:pretty">Foco em cliente, não em clique.</h3>
+        <h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(26px,3.2vw,34px);line-height:1.15;text-wrap:pretty">Foco em cliente, não em clique.</h3>
         <p style="font-size:16px;line-height:1.65;color:#B9C6C4;text-wrap:pretty">Muita campanha mede sucesso por cliques e visualizações. Nós medimos pelo que importa: quantos contatos viraram clientes e quanto custou cada um. Integramos os dados dos anúncios com o atendimento no WhatsApp para otimizar o investimento com base em resultado real.</p>
       </div>
     </div>
@@ -267,15 +272,15 @@ img{max-width:100%}
     <div style="max-width:1120px;margin:0 auto">
       <div data-reveal style="max-width:680px;display:flex;flex-direction:column;gap:12px">
         <p style="font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#8F661C">Investimento</p>
-        <h2 style="font-family:Marcellus,serif;font-size:clamp(28px,4vw,40px);line-height:1.12;text-wrap:pretty">Tráfego sem atendimento é dinheiro jogado fora.</h2>
+        <h2 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(28px,4vw,40px);line-height:1.12;text-wrap:pretty">Tráfego sem atendimento é dinheiro jogado fora.</h2>
         <p style="font-size:17px;line-height:1.6;color:#3B4B57;text-wrap:pretty">Aqui, cada lead do anúncio é atendido na hora pela sua SecretarIA, e você vê quanto custou cada agendamento.</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;margin-top:36px;align-items:start">
         <div data-reveal style="position:relative;background:#F3F5F4;border:2px solid #B4842C;border-radius:20px;padding:clamp(22px,5vw,30px) clamp(20px,5vw,28px);display:flex;flex-direction:column;gap:6px;box-shadow:0 24px 50px -24px rgba(16,34,47,.25)">
-          <span style="position:absolute;top:-13px;left:24px;background:#B4842C;color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:99px">Exclusivo para clientes da SecretarIA</span>
-          <h3 style="font-family:Marcellus,serif;font-size:24px">Gestão de tráfego Google + Meta</h3>
+          <span style="position:absolute;top:-13px;left:24px;background:#B4842C;color:#10222F;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:99px">Exclusivo para clientes da SecretarIA</span>
+          <h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:24px">Gestão de tráfego Google + Meta</h3>
           <p style="color:#3B4B57;font-size:15px">Campanhas geridas de ponta a ponta</p>
-          <p style="font-family:Marcellus,serif;font-size:38px;line-height:1;margin-top:14px">R$ 497 <small style="font-family:Archivo,sans-serif;font-size:14px;color:#3B4B57;font-weight:500">/mês</small></p>
+          <p style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:38px;line-height:1;margin-top:14px">R$ 497 <small style="font-family:Archivo,'Archivo Fallback',sans-serif;font-size:14px;color:#3B4B57;font-weight:500">/mês</small></p>
           <p style="font-size:13px;color:#3B4B57">Pix ou cartão · verba de anúncio à parte</p>
           <p style="margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8F661C">O que está incluso</p>
           <ul style="list-style:none;margin:4px 0 0;padding:0">
@@ -288,11 +293,11 @@ img{max-width:100%}
             <li style="display:flex;gap:12px;padding:9px 0;border-top:1px dashed #DDE3E2;font-size:15px;line-height:1.5"><span aria-hidden="true" style="flex:none;width:12px;height:12px;margin-top:5px;background:#3B4B57;clip-path:polygon(50% 0,100% 18%,100% 62%,50% 100%,0 62%,0 18%)"></span>Fotos e vídeos do negócio que já tiver</li>
           </ul>
           <p style="margin-top:14px;font-size:13px;color:#3B4B57">Não incluso: produção de vídeo.</p>
-          <a href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20gest%C3%A3o%20de%20tr%C3%A1fego%20pago." target="_blank" rel="noopener" style="margin-top:18px;display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:12px;background:#B4842C;color:#fff;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s" class="egh8">Solicitar diagnóstico gratuito</a>
+          <a href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20gest%C3%A3o%20de%20tr%C3%A1fego%20pago." target="_blank" rel="noopener" style="margin-top:18px;display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:12px;background:#B4842C;color:#10222F;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s" class="egh8">Solicitar diagnóstico gratuito</a>
         </div>
         <div data-reveal style="background:#10222F;color:#EDF1F0;border-radius:20px;padding:clamp(22px,5vw,30px) clamp(20px,5vw,28px);display:flex;flex-direction:column;gap:14px;align-self:stretch;justify-content:center">
           <p style="font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B4842C">Por que só com a SecretarIA</p>
-          <h3 style="font-family:Marcellus,serif;font-size:clamp(24px,3vw,30px);line-height:1.15;text-wrap:pretty">Anúncio traz o contato. A SecretarIA transforma em agendamento.</h3>
+          <h3 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(24px,3vw,30px);line-height:1.15;text-wrap:pretty">Anúncio traz o contato. A SecretarIA transforma em agendamento.</h3>
           <p style="font-size:16px;line-height:1.65;color:#B9C6C4;text-wrap:pretty">Com o atendimento automatizado no mesmo WhatsApp que recebe os leads, nenhum contato fica sem resposta e o relatório mostra o caminho completo: investimento, lead e agendamento.</p>
           <p style="font-size:15px;line-height:1.6;color:#B9C6C4">Ainda não é cliente da SecretarIA? Conheça os planos primeiro.</p>
           <div style="display:flex;flex-wrap:wrap;gap:12px"><a href="/secretaria/" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:12px;border:1px solid rgba(255,255,255,.3);color:#EDF1F0;font-weight:600;font-size:15px;text-decoration:none" class="egh4">Conhecer a SecretarIA <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
@@ -307,10 +312,10 @@ img{max-width:100%}
   <div data-reveal style="max-width:1120px;margin:0 auto;background:#10222F;color:#EDF1F0;border-radius:24px;padding:clamp(36px,6vw,72px) clamp(24px,5vw,64px);position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px">
     <div aria-hidden="true" style="position:absolute;right:-120px;bottom:-180px;width:460px;height:460px;border-radius:50%;background:radial-gradient(closest-side,rgba(180,132,44,.32),transparent 70%);pointer-events:none"></div>
     <p style="font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B4842C;position:relative">Próximo passo</p>
-    <h2 style="font-family:Marcellus,serif;font-size:clamp(30px,4.4vw,46px);line-height:1.12;max-width:20ch;text-wrap:pretty;position:relative"><span data-cta-title>Pronto para atrair mais clientes?</span></h2>
+    <h2 style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:clamp(30px,4.4vw,46px);line-height:1.12;max-width:20ch;text-wrap:pretty;position:relative"><span data-cta-title>Pronto para atrair mais clientes?</span></h2>
     <p style="font-size:17px;line-height:1.6;color:#B9C6C4;max-width:48ch;position:relative"><span data-cta-text>Chama no WhatsApp e a gente conversa sobre o seu negócio, sem compromisso.</span></p>
     <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;position:relative;margin-top:8px">
-      <a href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20gest%C3%A3o%20de%20tr%C3%A1fego%20pago." data-wa-page target="_blank" rel="noopener" style="flex:1 1 200px;max-width:360px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:12px;background:#B4842C;color:#fff;font-weight:600;font-size:16px;text-decoration:none;box-shadow:0 12px 28px -10px rgba(180,132,44,.65);transition:transform .2s" class="egh8">
+      <a href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20gest%C3%A3o%20de%20tr%C3%A1fego%20pago." data-wa-page target="_blank" rel="noopener" style="flex:1 1 200px;max-width:360px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:12px;background:#B4842C;color:#10222F;font-weight:600;font-size:16px;text-decoration:none;box-shadow:0 12px 28px -10px rgba(180,132,44,.65);transition:transform .2s" class="egh8">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>
         Chamar no WhatsApp
       </a>
@@ -325,7 +330,7 @@ img{max-width:100%}
     <div style="display:flex;flex-direction:column;gap:14px">
       <a href="/" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#EDF1F0">
         <svg width="26" height="31" viewBox="0 0 34 40" fill="none" aria-hidden="true"><path d="M17 1 32 7v12c0 9.5-6.2 16.4-15 20C8.2 35.4 2 28.5 2 19V7L17 1Z" stroke="#B4842C" stroke-width="2.2"></path><path d="M17 9v22M9.5 15.5 17 12l7.5 3.5" stroke="#B4842C" stroke-width="1.6" stroke-linecap="round"></path></svg>
-        <span style="font-family:Marcellus,serif;font-size:16px;letter-spacing:.14em;text-transform:uppercase">Égide <span style="color:#B4842C">Digital</span></span>
+        <span style="font-family:Marcellus,'Marcellus Fallback',serif;font-size:16px;letter-spacing:.14em;text-transform:uppercase">Égide <span style="color:#C99A3E">Digital</span></span>
       </a>
       <p style="font-size:15px;line-height:1.6;max-width:36ch">Sites, atendimento com IA no WhatsApp e tráfego pago. Tecnologia própria para empresas de todo o Brasil.</p>
     </div>
@@ -346,7 +351,7 @@ img{max-width:100%}
 </footer>
 
 <span class="eg-mob" style="display:contents">
-  <a href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20gest%C3%A3o%20de%20tr%C3%A1fego%20pago." data-wa-page target="_blank" rel="noopener" aria-label="Chamar no WhatsApp" style="position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#B4842C;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(180,132,44,.7),0 0 0 1px rgba(255,255,255,.15);transition:transform .2s" class="egh11">
+  <a href="https://wa.me/5594992669085?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20gest%C3%A3o%20de%20tr%C3%A1fego%20pago." data-wa-page target="_blank" rel="noopener" aria-label="Chamar no WhatsApp" style="position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#B4842C;color:#10222F;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(180,132,44,.7),0 0 0 1px rgba(255,255,255,.15);transition:transform .2s" class="egh11">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>
   </a>
 </span>
@@ -361,13 +366,14 @@ EG.toggleMenu=function(){setMenu(!menuOpen)};EG.closeMenu=function(){setMenu(fal
 function route(){var p='trafego-pago';var first=page===null;
  if(p!==page){page=p;$$('[data-page]').forEach(function(e){e.style.display=e.getAttribute('data-page')===page?'contents':'none'});document.title=TITLES[page];$$('[data-wa-page]').forEach(function(a){a.href=WA[page]});$$('[data-cta-title]').forEach(function(e){e.textContent=CTA[page]});$$('[data-cta-text]').forEach(function(e){e.textContent=page==='secretaria'?'Chama no WhatsApp e a gente te mostra a SecretarIA atendendo de verdade.':'Chama no WhatsApp e a gente conversa sobre o seu negócio, sem compromisso.'});setMenu(false);if(!first)window.scrollTo(0,0);reveal();setupCanvas();dashEl=null;}}
 function reveal(){if(!io)io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.setAttribute('data-shown','');io.unobserve(en.target)}})},{rootMargin:'0px 0px -6% 0px'});$$('[data-reveal]:not([data-shown])').forEach(function(el){io.observe(el)})}
-function setupCanvas(){var cv=$('[data-ref="canvas"]');if(!cv||cv===canvas)return;if(ro)ro.disconnect();canvas=cv;pctx=cv.getContext('2d');function resize(){var r=cv.parentElement.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);cv.width=r.width*d;cv.height=r.height*d;pctx.setTransform(d,0,0,d,0,0);cw=r.width;ch=r.height}resize();ro=new ResizeObserver(resize);ro.observe(cv.parentElement);var num=innerWidth<700?22:42;particles=[];for(var i=0;i<num;i++)particles.push({x:Math.random()*cw,y:Math.random()*ch,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.5+.6});drawParticles(true)}
+function setupCanvas(){var cv=$('[data-ref="canvas"]');if(!cv||cv===canvas)return;if(ro)ro.disconnect();canvas=cv;pctx=cv.getContext('2d');particles=[];function resize(){var r=cv.parentElement.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2),num=innerWidth<700?22:42;cv.width=r.width*d;cv.height=r.height*d;pctx.setTransform(d,0,0,d,0,0);cw=r.width;ch=r.height;if(!particles.length)for(var i=0;i<num;i++)particles.push({x:Math.random()*cw,y:Math.random()*ch,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.5+.6});drawParticles(true)}ro=new ResizeObserver(resize);ro.observe(cv.parentElement)}
 function drawParticles(force){if(!pctx||!canvas)return;var W=cw,H=ch,P=particles,x=pctx;x.clearRect(0,0,W,H);P.forEach(function(p){if(!force){p.x+=p.vx;p.y+=p.vy}if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0});x.lineWidth=1;for(var i=0;i<P.length;i++)for(var j=i+1;j<P.length;j++){var dx=P[i].x-P[j].x,dy=P[i].y-P[j].y,d=Math.hypot(dx,dy);if(d<120){x.strokeStyle='rgba(180,132,44,'+((1-d/120)*.28)+')';x.beginPath();x.moveTo(P[i].x,P[i].y);x.lineTo(P[j].x,P[j].y);x.stroke()}}x.fillStyle='rgba(217,168,69,.75)';P.forEach(function(p){x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fill()})}
 function tickDash(now){var d=$('[data-ref="dash"]');if(!d){dashEl=null;return}if(dashEl!==d){dashEl=d;dashStart=now}var q=reduced?1:Math.max(0,Math.min(1,((((now-dashStart)%12000)/12000)-.12)/.78));q=1-(1-q)*(1-q);var a=$('[data-ref="clicks"]'),l=$('[data-ref="leads"]'),p=$('[data-ref="cpl"]');if(a)a.textContent=Math.round(q*1284).toLocaleString('pt-BR');if(l)l.textContent=String(Math.round(q*63));if(p)p.textContent=q<.03?'\u2014':'R$ '+Math.round(41-q*17)}
+var mqDash=matchMedia('(min-width:860px)');
 function loop(now){requestAnimationFrame(loop);if(document.hidden)return;tickDash(now);if(reduced)return;if(now-lastIn>2500)t={x:Math.sin(now/2400)*.45,y:Math.cos(now/3100)*.3};c.x+=(t.x-c.x)*.06;c.y+=(t.y-c.y)*.06;
  var s=$('[data-ref="shield"]');if(s)s.style.transform='rotateY('+(c.x*24)+'deg) rotateX('+(-c.y*16)+'deg)';var sp=$('[data-ref="spec"]');if(sp)sp.style.transform='translate3d('+(-c.x*20)+'%,'+(-c.y*14)+'%,70px)';
  $$('[data-ref="phone"]').forEach(function(ph){ph.style.transform='rotateY('+(-8+c.x*10)+'deg) rotateX('+(3-c.y*7)+'deg)'});
- var d=$('[data-ref="dash"]');if(d)d.style.transform=innerWidth<860?'':'rotateY('+(-3+c.x*4)+'deg) rotateX('+(2-c.y*4)+'deg)';
+ var d=$('[data-ref="dash"]');if(d)d.style.transform=!mqDash.matches?'':'rotateY('+(-3+c.x*4)+'deg) rotateX('+(2-c.y*4)+'deg)';
  var lp=$('[data-ref="laptop"]');if(lp)lp.style.transform='rotateY('+(-6+c.x*8)+'deg) rotateX('+(4-c.y*6)+'deg)';
  var p2=$('[data-ref="phone2"]');if(p2)p2.style.transform='translateZ(40px) rotateY('+(-12+c.x*12)+'deg) rotateX('+(c.y*-6)+'deg)';drawParticles()}
 var base='padding:9px 12px;font-size:13px;line-height:1.4;max-width:84%;color:#EDF1F0;animation:egRise .35s ease both;box-shadow:0 2px 4px rgba(0,0,0,.25);';
